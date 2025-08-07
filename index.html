@@ -1,47 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            button {
-                border: 5px red solid;
-                padding: 10px;
-                border-radius: 20px;
-                position: relative;
-            }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalonNilu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepagestyles.css">
 
-            button {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 12px 24px;
-                font-size: 30px;
-                background-color: #007bff;
-                color: white;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-        
-            button:hover {
-            background-color: #0056b3;
-            }
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/homepage/logo.png" alt="Logo" class="logo me-2">
+                <span class="brand-name">SalonNilu</span>
+            </a>
 
-            a {
-                text-decoration:none;
-                color: White;
-                font-weight: 100px;
-            }
-        </style>
-    </head>
-    <body>
-        <button><a href="Home page/home.html">Salon Nilu</a></button>
+            <button class="navbar-toggler" 
+                    type="button"  
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <script src="index.js"></script>
-    </body>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" 
+                            href="#" id="servicesDropdown" 
+                            role="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown" style="min-width: 250px;">
+
+                            <li class="dropdown-header">Men</li>
+                            <li><a class="dropdown-item" href="#">Haircuts & Styling</a></li>
+                            <li><a class="dropdown-item" href="#">Beard Grooming</a></li>
+                            <li><a class="dropdown-item" href="#">Shaving</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li class="dropdown-header">Women</li>
+                            <li><a class="dropdown-item" href="#">Hair Coloring</a></li>
+                            <li><a class="dropdown-item" href="#">Manicure & Pedicure</a></li>
+                            <li><a class="dropdown-item" href="#">Facial Treatments</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li class="dropdown-header">Bridal</li>
+                            <li><a class="dropdown-item" href="#">Bridal Makeup</a></li>
+                            <li><a class="dropdown-item" href="#">Bridal Hair Styling</a></li>
+                            <li><a class="dropdown-item" href="#">Pre-Wedding Packages</a></li>                        
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="#" class="btn btn-primary btn-sm px-4">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </nav>
+
+    <section class="hero-section d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="hero-title">Welcome to SalonNilu</h1>
+            <p class="hero-subtitle">Your one-stop destination for all your beauty and grooming needs.</p>
+            <a href="#" class="btn btn-primary btn-lg mt-3"  id="hero-btn">Book Now</a>
+        </div>
+    </section>
+
+    <section class="services-overview py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <p class="section-subtitle mb-5">
+                Offering professional beauty services for Men, Women & Brides - tailored to bring out your best look.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="service-card p-4 h-100">
+                        <img src="images/homepage/menhs.avif" class="img-fluid rounded mb-3" alt="Men's Haircut">
+                        <h4>Men</h4>
+                        <p>Haircuts, beard grooming and styling designed for the modern gentleman.</p>
+                        <a href="#" class="btn btn-outline-light btn-sm mt-2">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service-card p-4 h-100">
+                        <img src="images/homepage/womenhs.avif" class="img-fluid rounded mb-3" alt="Women's Haircut">
+                        <h4>Women</h4>
+                        <p>Hair coloring, facials and treatments to enhance natural beauty.</p>
+                        <a href="#" class="btn btn-outline-light btn-sm mt-2">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service-card p-4 h-100">
+                        <img src="images/homepage/brides.jpg" class="img-fluid rounded mb-3" alt="Bridal Hair">
+                        <h4>Bridal</h4>
+                        <p>Makeup, hair styling and full packages for your special day.</p>
+                        <a href="#" class="btn btn-outline-light btn-sm mt-2">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
