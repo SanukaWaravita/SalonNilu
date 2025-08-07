@@ -240,7 +240,7 @@
 
 .about-preview p{
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 20px;
 }
@@ -251,10 +251,17 @@
     font-weight: 700;
     font-size: 1.2rem;
     border-radius: 25px;
+    margin-left: 10px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
 }
-
+.about-preview .btn-primary:hover{
+    background-color: rgb(230, 194, 0);
+    color:white;
+    transform: scale(1.15);
+}
 .about-preview img{
-    border-radius: 25px;
+    border:2px solid gold;
+    border-radius: 15px;
     max-width: 100%;
     height: auto;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
@@ -331,4 +338,23 @@
     16% { opacity: 1; }
     20% { opacity: 0; }
     100% { opacity: 0; }
+}
+
+.gallery-preview .btn-primary{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: rgb(255, 215, 0);
+    color: rgb(74, 35, 90);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    margin-top: 20px;
+}
+.gallery-preview .btn-primary:hover{
+    background-color: rgb(230, 194, 0);
+    color:white;
+    transform: scale(1.15);
 }
