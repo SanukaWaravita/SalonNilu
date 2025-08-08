@@ -216,7 +216,7 @@
 }
 
 .about-preview{
-    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(72, 38, 84), rgb(99, 67, 112));
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(72, 38, 84), rgb(115, 87, 126));
     color: #fff;
     padding:60px 30px;
     border-bottom: 2px solid gold;;
@@ -279,7 +279,8 @@
 }
 
 .gallery-preview{
-    background: linear-gradient(to bottom, rgb(115, 87, 126), rgb(73, 44, 83), rgb(43, 8, 57))
+    background: linear-gradient(to bottom, rgb(115, 87, 126), rgb(73, 44, 83), rgb(43, 8, 57));
+    border-bottom: 2px solid gold;
 }
 
 .gallery-preview h2{
@@ -306,7 +307,7 @@
     height:100%;
     object-fit: cover;
     opacity: 0;
-    animation: fadeSliders 25s infinite;
+    animation: fadeSliders 9s infinite;
     border-radius: 25px;
     border: 3px solid rgba(255, 215, 0, 0.8);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -317,19 +318,11 @@
 }
 
 .image-slider img:nth-child(2){
-    animation-delay: 5s;
+    animation-delay: 3s;
 }
 
 .image-slider img:nth-child(3){
-    animation-delay: 10s;
-}
-
-.image-slider img:nth-child(4){
-    animation-delay: 15s;
-}
-
-.image-slider img:nth-child(5){
-    animation-delay: 20s;
+    animation-delay: 6s;
 }
 
 @keyframes fadeSliders{
@@ -357,4 +350,51 @@
     background-color: rgb(230, 194, 0);
     color:white;
     transform: scale(1.15);
+}
+
+.why-choose-us{
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(73, 44, 83), rgb(115, 87, 126));
+}
+
+.section-heading{
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 3.3rem;
+}
+
+.section-subheading{
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+    font-size:1.3rem;
+    font-weight: 500;
+}
+
+.feature-box{
+    background-color: rgba(142, 69, 134, 0.2);
+    border-radius: 15px;
+    padding: 25px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+}
+
+.feature-box:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0px 20px rgba(255, 215, 0,);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.feature-box h4{
+    color:#ffd700;
+    font-weight: bold;
+    margin-top: 13px;
+    font-size:1.6rem;
+}
+
+.feature-box p{
+    color:#ddd;
+    font-size:1.3rem;
+    margin-top: 45px;
+    font-weight: 500;
 }
