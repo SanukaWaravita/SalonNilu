@@ -307,7 +307,7 @@
     height:100%;
     object-fit: cover;
     opacity: 0;
-    animation: fadeSliders 9s infinite;
+    animation: fadeSliders 8s infinite;
     border-radius: 25px;
     border: 3px solid rgba(255, 215, 0, 0.8);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -354,6 +354,7 @@
 
 .why-choose-us{
     background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(73, 44, 83), rgb(115, 87, 126));
+    border-bottom: 2px solid gold;
 }
 
 .section-heading{
@@ -380,9 +381,8 @@
 
 .feature-box:hover{
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 0px 20px rgba(255, 215, 0,);
     border: 2px solid rgba(255, 215, 0, 0.4);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    cursor: pointer;
 }
 
 .feature-box h4{
@@ -398,3 +398,182 @@
     margin-top: 45px;
     font-weight: 500;
 }
+
+.pricing-preview{
+    background:linear-gradient(to bottom, rgb(115, 87, 126), rgb(73, 44, 83), rgb(43, 8, 57));
+    color:#fff;
+    border-bottom: 2px solid gold;
+}
+
+.pricing-card{
+    background-color: rgba(142, 69, 134, 0.2);
+    border-radius: 15px;
+    padding: 25px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+}
+
+.pricing-card:hover{
+    transform: translateY(-5px) scale(1.05);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    cursor: pointer;
+}
+
+.pricing-card h4{
+    color:#ffd700;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size:1.6rem;
+}
+
+.pricing-card p{
+    color:#ddd;
+    font-size:1.3rem;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.pricing-preview .btn-primary{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: rgb(255, 215, 0);
+    color: rgb(74, 35, 90);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    margin-top: 20px;
+}
+.pricing-preview .btn-primary:hover{
+    background-color: rgb(230, 194, 0);
+    color:white;
+    transform: scale(1.15);
+}
+
+.footer{
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(73, 44, 83), rgb(115, 87, 126));
+    color: white;
+    padding: 50px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-card{
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.footer-card h5{
+    margin-bottom: 15px;
+    font-size: 23px;
+    font-weight: bold;
+    color: gold;
+    margin-left: 10px;
+}
+
+.footer-card p{
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    color: #ddd;
+}
+
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+.icon-wrapper{
+    position:relative;
+    display: inline-block;
+}
+
+.icon-wrapper i{
+    font-size: 38px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-wrapper:hover i.bi-facebook{
+    color: #1877F2;
+}
+
+.icon-wrapper:hover i.bi-twitter{
+        color: #1DA1F2;
+}
+
+.icon-wrapper:hover i.bi-instagram{
+    color: #C13584;
+}
+
+.icon-wrapper:hover i.bi-whatsapp{
+    color: #25D366;
+}
+
+.tooltip{
+    visibility: hidden;
+    background-color: rgba(1, 23, 151, 0.467);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius:  6px;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translate(-50%) scale(0.8);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+
+.icon-wrapper:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%) scale(1);
+}
+
+.footer-bottom{
+    color: #ccc;
+    text-align: center;
+    font-size: 16.5px;
+    font-weight: bold;
+    margin-top: 30px;
+    border-top: 2px solid gold;
+}
+
+.footer-bottom p{
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
