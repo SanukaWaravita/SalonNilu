@@ -1,0 +1,395 @@
+.logo{
+    height:40px;
+    width:auto;
+}
+
+.navbar{
+    background: linear-gradient(to right, rgb(117, 80, 132), rgb(73, 44, 83), rgb(43, 8, 57));
+    border-bottom: 2px solid gold;
+}
+
+.brand-name{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color:rgb(255, 215, 0);
+}
+.brand-name:hover{
+    color: rgb(241, 196, 15);
+}
+
+.navbar-nav .nav-link {
+    color: rgb(116, 180, 243) !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5px 2px;
+    transition: all 0.3s ease; 
+    margin-left: 10px;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:active:hover{
+    color: rgb(255, 215, 0) !important;
+    transform: scale(1.15);
+}
+
+.dropdown-menu{
+    background-color: #a05cbe;
+    border:none;
+    box-shadow: 0 2px 8px rgba(165, 100, 200, 0.2);
+}
+
+.dropdown-header{
+    font-size: 1rem;
+    font-weight: bold;
+    color:rgb(255, 215, 0);
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    margin-bottom: 0.5rem;
+    margin-left: 6px;
+}
+
+.dropdown-item{
+    color:rgb(248, 249, 250) !important;
+    padding: 0.25rem 1rem;
+    transition: all 0.3s ease;
+}
+.dropdown-item:hover{
+    background-color: rgba(89, 7, 81, 0.15) !important;
+    border-radius: 15px;
+    font-weight: bold;
+    color:rgb(255, 215, 0) !important;
+}
+
+.dropdown-divider{
+    border-color: rgba(247, 143, 143, 0.2);
+}
+
+.btn-primary{
+    font-size: 1rem;
+    background-color: rgb(255, 215, 0) !important;
+    border:none !important;
+    border-radius: 15px;
+    color:rgb(74, 35, 90) !important;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgb(250, 242, 193);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover{
+    background-color: rgb(230, 194, 0) !important;
+    border-color: rgb(230, 194, 0) !important;
+    color:rgb(255, 255, 255) !important;
+    transform: scale(1.15);
+}
+
+.navbar-toggler{
+    border-color: rgb(255, 215, 0);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,215,0, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.booking-section{
+    background: linear-gradient(to bottom, rgb(112, 81, 124), rgb(73, 44, 83), rgb(43, 8, 57));
+    padding : 60px 20px 80px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+.booking-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-title{
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: rgb(255, 215, 0);
+    margin-bottom: 40px;
+}
+
+.booking-description{
+    font-size:1.3rem;
+    font-weight: 600;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.booking-form{
+    background-color: rgba(142, 69, 134, 0.2);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: left;
+    margin-top: 30px;
+}
+
+.form-row{
+    display:flex;
+    gap:20px;
+    margin-bottom: 25px;
+}
+
+.form-now{
+    display:flex;
+    gap:20px;
+    margin-bottom: 25px;
+}
+
+.form-group{
+    position: relative;
+    flex: 1;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group select{
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    background:rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: 
+        linear-gradient(45deg, transparent 50%, gold 50%),
+        linear-gradient(135deg, gold 50%, transparent 50%),
+        linear-gradient(to right, rgba(255, 215, 0, 0.4), rgba(255, 215, 0, 0.4)); 
+    background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 25px) 0.5em; 
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.form-group select option {
+    background-color: rgb(43, 8, 57);
+    color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: rgb(255, 215, 0);
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.form-group label{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: rgba(255, 215, 0, 0.6);
+    font-weight: 600;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s ease all;
+    background-color: transparent;
+    padding: 0 5px;
+    z-index: 1;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label,
+.form-group select:valid + label {
+    top: -8px;
+    font-size: 1rem;
+    color: rgb(255, 215, 0);
+    background-color: rgba(43, 8, 57, 0.8);
+    border-radius: 6px;
+}
+
+select#packages{
+    width:100%;
+    padding:12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(153, 39, 19, 0.5);
+    background-color: #fff;
+    font-size: 16px;
+    color: none;
+    transition: all 0.3s ease;
+}
+
+.booking-form .btn-primary{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: rgb(255, 215, 0) !important;
+    color: rgb(74, 35, 90) !important;
+    border: none !important;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.booking-form .btn-primary:hover{
+    background-color: rgb(230, 194, 0) !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.booking-note{
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+    font-weight: 600;
+}
+
+@media (max-width: 600px){
+    .form-row,
+    .form-now{
+        flex-direction: column;
+    }
+    
+    .booking-title{
+        font-size: 2.5rem;
+    }
+    
+    .booking-description{
+        font-size: 1.1rem;
+    }
+}
+
+.footer{
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(73, 44, 83), rgb(115, 87, 126));
+    color: white;
+    padding: 50px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-card{
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.footer-card h5{
+    margin-bottom: 15px;
+    font-size: 23px;
+    font-weight: bold;
+    color: gold;
+    margin-left: 10px;
+}
+
+.footer-card p{
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    color: #ddd;
+}
+
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+.icon-wrapper{
+    position:relative;
+    display: inline-block;
+}
+
+.icon-wrapper i{
+    font-size: 38px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-wrapper:hover i.bi-facebook{
+    color: #1877F2;
+}
+
+.icon-wrapper:hover i.bi-twitter{
+        color: #1DA1F2;
+}
+
+.icon-wrapper:hover i.bi-instagram{
+    color: #C13584;
+}
+
+.icon-wrapper:hover i.bi-whatsapp{
+    color: #25D366;
+}
+
+.tooltip{
+    visibility: hidden;
+    background-color: rgba(1, 23, 151, 0.467);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius:  6px;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translate(-50%) scale(0.8);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+
+.icon-wrapper:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%) scale(1);
+}
+
+.footer-bottom{
+    color: #ccc;
+    text-align: center;
+    font-size: 16.5px;
+    font-weight: bold;
+    margin-top: 30px;
+    border-top: 2px solid gold;
+}
+
+.footer-bottom p{
+    margin: 0;
+    letter-spacing: 0.5px;
+}
