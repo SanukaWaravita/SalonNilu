@@ -89,7 +89,7 @@
 }
 
 .booking-section{
-    background: linear-gradient(to bottom, rgb(115, 87, 126), rgb(73, 44, 83), rgb(43, 8, 57));
+    background: linear-gradient(to bottom, rgb(112, 81, 124), rgb(73, 44, 83), rgb(43, 8, 57));
     padding : 60px 20px 80px;
     color: #fff;
     text-align: center;
@@ -130,7 +130,6 @@
     margin-bottom: 25px;
 }
 
-/* Added missing CSS for form-now class */
 .form-now{
     display:flex;
     gap:20px;
@@ -156,7 +155,6 @@
     transition: border-color 0.3s ease;
 }
 
-/* Fixed placeholder styling for better visibility */
 .form-group input::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
@@ -179,7 +177,6 @@
     padding-right: 40px;
 }
 
-/* Fixed select option colors */
 .form-group select option {
     background-color: rgb(43, 8, 57);
     color: #fff;
@@ -205,7 +202,6 @@
     z-index: 1;
 }
 
-/* Fixed label animation - added :valid pseudo-class and improved selectors */
 .form-group input:focus + label,
 .form-group input:valid + label,
 .form-group input:not(:placeholder-shown) + label,
@@ -219,7 +215,17 @@
     border-radius: 6px;
 }
 
-/* Fixed submit button styling to override Bootstrap */
+select#packages{
+    width:100%;
+    padding:12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(153, 39, 19, 0.5);
+    background-color: #fff;
+    font-size: 16px;
+    color: none;
+    transition: all 0.3s ease;
+}
+
 .booking-form .btn-primary{
     width: 100%;
     padding: 15px 0;
