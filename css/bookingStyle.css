@@ -215,15 +215,18 @@
     border-radius: 6px;
 }
 
-select#packages{
+select#package{
     width:100%;
     padding:12px 14px;
     border-radius: 8px;
-    border: 1px solid rgba(153, 39, 19, 0.5);
-    background-color: #fff;
     font-size: 16px;
     color: none;
     transition: all 0.3s ease;
+}
+
+option{
+    background-color: rgb(43, 8, 57);
+    color: #fff;
 }
 
 .booking-form .btn-primary{
