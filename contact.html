@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepagestyles.css">
+    <link rel="stylesheet" href="css/contactstyles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/homepage/logo.png" alt="Logo" class="logo me-2">
+                <span class="brand-name">SalonNilu</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown" style="min-width: 250px;">
+
+                            <li class="dropdown-header">Men</li>
+                            <li><a class="dropdown-item" href="#">Haircuts & Styling</a></li>
+                            <li><a class="dropdown-item" href="#">Beard Grooming</a></li>
+                            <li><a class="dropdown-item" href="#">Shaving</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="dropdown-header">Women</li>
+                            <li><a class="dropdown-item" href="#">Hair Coloring</a></li>
+                            <li><a class="dropdown-item" href="#">Manicure & Pedicure</a></li>
+                            <li><a class="dropdown-item" href="#">Facial Treatments</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="dropdown-header">Bridal</li>
+                            <li><a class="dropdown-item" href="#">Bridal Makeup</a></li>
+                            <li><a class="dropdown-item" href="#">Bridal Hair Styling</a></li>
+                            <li><a class="dropdown-item" href="#">Pre-Wedding Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="About_Us.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="booking.html" class="btn btn-primary btn-sm px-4">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <h1 class="text-center">Get in Touch with Us</h1>
+                        <p class="text-center">We would love to hear from you.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <div class="row g-0 mb-4">
+                        <div class="col-12">
+                            <div class="contact-card p-4" id="contact_card">
+                                <h2 class="m-4 mb-4">Send Us a Message</h2>
+                                <form>
+                                    <div class="container p-4">
+                                        <div class="row mb-4">
+                                            <div class="col-md-6 mb-4">
+                                                <label for="firstName" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="firstName" required placeholder="Enter your first name">
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <label for="lastName" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="lastName" required placeholder="Enter your last name">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-md-6 mb-4">
+                                                <label for="email" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="email" required placeholder="Enter your email address">
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <label for="phone" class="form-label">Phone Number</label>
+                                                <input type="tel" class="form-control" id="phone" required placeholder="Enter your phone number">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-12 mb-4">
+                                                <label for="lastName" class="form-label">Subject</label>
+                                                <input type="text" class="form-control" id="lastName" required placeholder="Enter the subject of your message">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-12">
+                                                <label for="message" class="form-label">Message</label>
+                                                <textarea class="form-control" id="message" rows="6"
+                                                    placeholder="Tell us how we can help you..." required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" id="SendMessageBtn" class="btn btn-primary btn-lg">
+                                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="contact-info-card p-4 text-center">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-whatsapp fa-xl"></i>
+                                </div>
+                                <br>
+                                <h5 class="contact-text mb-3">WhatsApp Us</h5>
+                                <p class="contact-text mb-2"><strong>Main: </strong><a href="#" target="_blank"></a></p>
+                                <p class="contact-text mb-2"><strong>Support: </strong></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="contact-info-card p-4 text-center">
+                                <br>
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h5 class="contact-text mb-3">Email Us</h5>
+                                <p class="contact-text mb-2"><strong>General: </strong></p>
+                                <p class="contact-text mb-2"><strong>Support: </strong></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="contact-info-card p-4 text-center">
+                                <div class="contact-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <br>
+                                <h5 class="contact-text mb-3">Follow Us</h5>
+                                <div class="d-flex justify-content-center gap-3 mb-2">
+                                    <a href="#" class="contact-text fs-4">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="contact-text fs-4">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="contact-text fs-4">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="contact-text fs-4">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                                <p class="contact-text mb-2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                </div>
+            </div>
+
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
