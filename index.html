@@ -478,5 +478,27 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      
+      const sections = document.querySelectorAll("section");
+
+      function revealSections(){
+        const triggerBottom = window.innerHeight * 0.85;
+
+        sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+
+          if(sectionTop < triggerBottom){
+            section.classList.add("show");
+          }
+          else{
+            section.classList.remove("show");
+          }
+        });
+      }
+      window.addEventListener("scroll", revealSections);
+      revealSections();
+    </script>
   </body>
 </html>

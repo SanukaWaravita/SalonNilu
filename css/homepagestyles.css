@@ -610,3 +610,21 @@
     letter-spacing: 0.5px;
 }
 
+body{
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(115, 87, 126));;
+}
+
+section{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2.5s ease, transform 2s ease;
+    background-color: transparent;
+}
+
+section.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
