@@ -333,14 +333,14 @@
     flex-shrink: 0;
 }
 
-img{
+.slide img{
     width:100%;
     height: auto;
     transition: transform 1s;
-    border:3px solid gold;
+    border: 2px solid gold;
 }
 
-img:hover{
+.slide img:hover{
     transform: translateZ(10px);
 }
 
