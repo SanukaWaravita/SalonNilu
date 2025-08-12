@@ -37,11 +37,13 @@
 .dropdown-menu{
     background-color: #a05cbe;
     border:none;
+    border-radius: 15px;
+    width: 320px;
     box-shadow: 0 2px 8px rgba(165, 100, 200, 0.2);
 }
 
 .dropdown-header{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color:rgb(255, 215, 0);
     padding-bottom: 0.3rem;
@@ -51,9 +53,12 @@
 }
 
 .dropdown-item{
+    font-size: 1rem;
+    border-radius: 15px;
+    font-weight: 500;
     color:rgb(248, 249, 250);
     padding: 0.25rem 1rem;
-    transition: all 0.3s ease;
+    transition:background-color 0.3s ease-in-out;
 }
 .dropdown-item:hover{
     background-color: rgba(89, 7, 81, 0.15);
