@@ -181,3 +181,15 @@ p.text-center{
 a {
     text-decoration: none;
 }
+
+.container {
+    border: 2px solid red;
+}
+
+#primaryContainer{
+    border: 3px solid blue;
+}
+
+#column{
+    border: 2px solid purple;
+}
