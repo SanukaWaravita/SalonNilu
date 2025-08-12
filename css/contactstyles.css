@@ -159,6 +159,11 @@ h5{
     box-shadow: 0 10px 20px rgba(0, 255, 204, 0.1);
     background: linear-gradient(135deg, #079bc87b 0%, #2cf63d69 100%);
 }
+
+#getInTouchWithUs{
+    margin-top: 1rem;
+}
+
 h1.text-center{
     font-size: 3.2rem;
     font-weight: bold;
@@ -192,4 +197,31 @@ a {
 
 #column{
     border: 2px solid purple;
+}
+
+#logoImg{
+    width:100px;
+    height: auto;
+}
+
+#salonNameLogo{
+    border: 5px solid orange;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+#columnWithLogo{
+    border: 2px solid red;
+}
+
+#columnWithName{
+    color: red;
+    border: 2px solid red;
+    font-weight: 700;
+    font-size: 5.0rem;
+    color:rgb(255, 215, 0);
+}
+
+body{
+    background-color: white;
 }

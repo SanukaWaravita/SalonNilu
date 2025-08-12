@@ -396,10 +396,6 @@
     transform: scale(1.15);
 }
 
-body{
-    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(115, 87, 126));;
-}
-
 section{
     opacity: 0;
     transform: translateY(30px);
