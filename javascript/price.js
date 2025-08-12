@@ -80,20 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(category);
   });
 
-  // Parallax effect for background decorations
-  window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-    const salonDecorations = document.querySelectorAll(".salon-decoration");
-
-    salonDecorations.forEach((decoration, index) => {
-      const speed = (index + 1) * 0.15;
-      decoration.style.transform = `translateY(${rate * speed}px) rotate(${
-        scrolled * 0.01
-      }deg)`;
-    });
-  });
-
   // Smooth scroll to sections (if you add navigation)
   function smoothScrollTo(element) {
     element.scrollIntoView({

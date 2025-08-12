@@ -167,51 +167,6 @@ body {
   }
 }
 
-.salon-decoration {
-  position: absolute;
-  opacity: 0.15;
-  animation: salonFloat 5s ease-in-out infinite;
-  font-size: 4rem;
-  color: var(--bright-gold);
-  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
-  transition: all 0.3s ease;
-}
-
-.salon-decoration:hover {
-  animation-duration: 3s;
-  opacity: 0.5;
-  transform: scale(1.2);
-}
-
-.salon-1 {
-  top: 8%;
-  left: -1%;
-  animation-delay: 0s;
-  font-size: 10rem;
-}
-
-@keyframes salonFloat {
-  0% {
-    transform: translateY(0px) rotate(0deg) scale(1);
-    opacity: 0.15;
-  }
-  25% {
-    transform: translateY(-35px) rotate(3deg) scale(1.15);
-    opacity: 0.35;
-  }
-  50% {
-    transform: translateY(-60px) rotate(-2deg) scale(0.85);
-    opacity: 0.4;
-  }
-  75% {
-    transform: translateY(-30px) rotate(4deg) scale(1.1);
-    opacity: 0.25;
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg) scale(1);
-    opacity: 0.15;
-  }
-}
 /*main container*/
 .price-container {
   max-width: 900px;
