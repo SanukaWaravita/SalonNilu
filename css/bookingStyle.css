@@ -242,11 +242,23 @@
 
 select#package{
     width:100%;
-    padding:12px 14px;
-    border-radius: 8px;
-    font-size: 16px;
-    color: none;
+    padding:12px 40px 12px 15px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    border: 2px solid gold;
     transition: all 0.3s ease;
+}
+
+select#package option{
+    background-color: rgba(43, 8, 57, 0.85);
+    color: gold;
+}
+
+select#package:focus{
+    border-color: gold;
+    background-color:rgba(255, 215, 0, 0.15);
+    color: rgb(74, 35, 90);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
 .booking-form .btn-primary{
@@ -254,9 +266,9 @@ select#package{
     padding: 15px 0;
     font-size: 1.4rem;
     font-weight: 700;
-    background-color: rgb(255, 215, 0) !important;
-    color: rgb(74, 35, 90) !important;
-    border: none !important;
+    background-color: rgb(255, 215, 0);
+    color: rgb(74, 35, 90);
+    border: none;
     border-radius: 25px;
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
     cursor: pointer;
@@ -265,8 +277,8 @@ select#package{
 }
 
 .booking-form .btn-primary:hover{
-    background-color: rgb(230, 194, 0) !important;
-    color: white !important;
+    background-color: rgb(230, 194, 0);
+    color: white;
     transform: scale(1.05);
 }
 
