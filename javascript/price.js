@@ -1,4 +1,4 @@
-// Smooth scroll animation for service items
+//  animation for service items
 document.addEventListener("DOMContentLoaded", function () {
   const serviceItems = document.querySelectorAll(".service-item");
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ripple.remove();
     }, 600);
 
-    // Here you can add actual booking functionality
+    //  add actual booking functionality
     alert("Redirecting to booking system...");
   });
 
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(category);
   });
 
-  // Smooth scroll to sections (if you add navigation)
+  // Smooth scroll to sections
   function smoothScrollTo(element) {
     element.scrollIntoView({
       behavior: "smooth",
