@@ -1,8 +1,12 @@
 .display-3{
     text-align: center;
+    color:rgb(255, 215, 0);
+    font-weight: bold;
+    font-style: italic;
+
 }
 .containermy-5{
-    background: linear-gradient(to bottom, rgb(143, 104, 157), rgb(73, 44, 83), rgb(43, 8, 57) );
+    background: linear-gradient(to bottom, rgb(147, 16, 194), rgb(147, 21, 189), rgb(140, 27, 184) );
     color:#fff;
     padding: 20px;
     
