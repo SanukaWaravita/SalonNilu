@@ -1,0 +1,235 @@
+.logo{
+    height:40px;
+    width:auto;
+}
+
+.navbar{
+    background: linear-gradient(to right, rgb(117, 80, 132), rgb(73, 44, 83), rgb(43, 8, 57));
+    border-bottom: 2px solid gold;;
+}
+
+.brand-name{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color:rgb(255, 215, 0);
+}
+.brand-name:hover{
+    color: rgb(241, 196, 15);
+}
+
+.navbar-nav .nav-link {
+    color: rgb(116, 180, 243);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5px 2px;
+    transition: all 0.3s ease; 
+    margin-left: 10px;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:active:hover{
+    color: rgb(255, 215, 0);
+    transform: scale(1.15);
+}
+
+.dropdown-menu{
+    background-color: #a05cbe;
+    border:none;
+    box-shadow: 0 2px 8px rgba(165, 100, 200, 0.2);
+}
+
+.dropdown-header{
+    font-size: 1rem;
+    font-weight: bold;
+    color:rgb(255, 215, 0);
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    margin-bottom: 0.5rem;
+    margin-left: 6px;
+}
+
+.dropdown-item{
+    color:rgb(248, 249, 250);
+    padding: 0.25rem 1rem;
+    transition: all 0.3s ease;
+}
+.dropdown-item:hover{
+    background-color: rgba(89, 7, 81, 0.15);
+    border-radius: 15px;
+    font-weight: bold;
+    color:rgb(255, 215, 0);
+}
+
+.dropdown-divider{
+    border-color: rgba(247, 143, 143, 0.2);
+}
+
+.btn-primary{
+    font-size: 1rem;
+    background-color: rgb(255, 215, 0);
+    border:none;
+    border-radius: 15px;
+    color:rgb(74, 35, 90);
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgb(250, 242, 193);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover{
+    background-color: rgb(230, 194, 0);
+    border-color: rgb(230, 194, 0);
+    color:rgb(255, 255, 255);
+    transform: scale(1.15);
+}
+
+.navbar-toggler{
+    border-color: rgb(255, 215, 0);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,215,0, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/*Banner Section*/
+.banner-section{
+position: relative;
+width: 100vw;
+height: 300px;
+min-height: 380px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+padding: 0;
+margin: 0;
+
+}
+.banner-img{
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-detail-box
+{
+position: absolute;
+left: 50%;
+top: 60%;
+transform: translate(-50%, -30%);
+width: 100%;
+max-width: 850px;
+background: papayawhip;
+border-radius: 8px;
+box-shadow: 0px 8px 32px rgba(0,0,0,0.17);
+padding: 40px 30px 30px 30px;
+}
+
+@media (max-width: 991px) {
+    .banner-img{
+        height: 260px;   
+    }
+    .banner-detail-box {
+    
+        max-width: 95vw;
+        padding: 24px 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 575px) {
+    .banner-img {
+        height: 160px;
+    }
+    .banner-detail-box {
+        padding: 13px 4vw;
+        font-size: 1rem;
+    }
+}
+
+/*Service Card*/
+.service-card {
+    transition: transform 0.2s box-shadow 0.2s;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    background: #fff;
+    height: 100%;
+    display: block;
+    flex-direction: column;
+}
+.service-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.12);
+}
+.service-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0 ;
+    background: #ececec;
+}
+.service-card .card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 28px;
+}
+.service-card .card-title {
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+.service-card .card-text {
+    text-align: center;
+    color: #212529;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+.service-card .btn {
+    background-color: #FFD600;
+    color: #222;
+    font-weight: bold;
+    border: none;
+    border-radius: 23px;
+    padding: 8px 28px;
+    font-size: 1.08rem;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.service-card .btn:hover {
+    background-color: #ffc107;
+    color: #000;
+}
+/*Catogory Section*/
+.category-section{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.card-title{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/*Responsive Styles*/
+@media (max-width: 991px) {
+    .service-card img {
+        height: 200px;
+    }
+    .category-section{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+   .service-card img {
+       height: 150px;
+   }
+   
+}

@@ -88,6 +88,30 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,215,0, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.success-message{
+    background: rgba(0, 128, 0, 0.15);
+    border: 2px solid limegreen;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: limegreen;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-message{
+    font-size: 1.4rem;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0; transform: scale(0.95);}
+    to{opacity: 1; transform: scale(1);}
+}
+
 .booking-section{
     background: linear-gradient(to bottom, rgb(112, 81, 124), rgb(73, 44, 83), rgb(43, 8, 57));
     padding : 60px 20px 80px;
@@ -152,7 +176,7 @@
     color: #fff;
     font-size: 1.2rem;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input::placeholder {
@@ -186,13 +210,14 @@
 .form-group select:focus {
     border-color: rgb(255, 215, 0);
     background-color: rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
 .form-group label{
     position: absolute;
     top: 50%;
-    left: 18px;
-    color: rgba(255, 215, 0, 0.6);
+    left: 20px;
+    color: rgba(255, 215, 0, 0.8);
     font-weight: 600;
     pointer-events: none;
     transform: translateY(-50%);
@@ -215,15 +240,25 @@
     border-radius: 6px;
 }
 
-select#packages{
+select#package{
     width:100%;
-    padding:12px 14px;
-    border-radius: 8px;
-    border: 1px solid rgba(153, 39, 19, 0.5);
-    background-color: #fff;
-    font-size: 16px;
-    color: none;
+    padding:12px 40px 12px 15px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    border: 2px solid gold;
     transition: all 0.3s ease;
+}
+
+select#package option{
+    background-color: rgba(43, 8, 57, 0.85);
+    color: gold;
+}
+
+select#package:focus{
+    border-color: gold;
+    background-color:rgba(255, 215, 0, 0.15);
+    color: rgb(74, 35, 90);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
 .booking-form .btn-primary{
@@ -231,9 +266,9 @@ select#packages{
     padding: 15px 0;
     font-size: 1.4rem;
     font-weight: 700;
-    background-color: rgb(255, 215, 0) !important;
-    color: rgb(74, 35, 90) !important;
-    border: none !important;
+    background-color: rgb(255, 215, 0);
+    color: rgb(74, 35, 90);
+    border: none;
     border-radius: 25px;
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
     cursor: pointer;
@@ -242,8 +277,8 @@ select#packages{
 }
 
 .booking-form .btn-primary:hover{
-    background-color: rgb(230, 194, 0) !important;
-    color: white !important;
+    background-color: rgb(230, 194, 0);
+    color: white;
     transform: scale(1.05);
 }
 
