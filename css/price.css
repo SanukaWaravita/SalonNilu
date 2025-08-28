@@ -129,44 +129,6 @@ body {
   position: relative;
 }
 
-/*Background element*/
-.bg-decoration {
-  position: fixed;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.bg-decoration::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(
-      circle at 25% 25%,
-      rgba(255, 255, 255, 0.1) 2px,
-      transparent 2px
-    ),
-    radial-gradient(
-      circle at 75% 75%,
-      rgba(255, 215, 0, 0.1) 1px,
-      transparent 1px
-    );
-  background-size: 50px 50px, 30px 30px;
-  animation: sparkle 20s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes sparkle {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    transform: translateX(-50px) translateY(-30px);
-  }
-}
-
 /*main container*/
 .price-container {
   max-width: 900px;
