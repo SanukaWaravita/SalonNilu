@@ -6,7 +6,27 @@
     color:#fff;
     padding: 20px;
     border-bottom: 2px solid gold;
+    object-fit: cover;
+    
 }
+#about_img{
+    display: flex;
+    
+    justify-content: center;
+    gap: 15px;
+    margin: 30px;
+    
+    
+
+
+
+}
+
+
+
+
+
+
 
 
 
