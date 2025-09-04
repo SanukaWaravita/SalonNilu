@@ -94,37 +94,12 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,215,0, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/*pricing page*/
-:root {
-  --primary-color: #8b4f9f;
-  --secondary-color: #b574d1;
-  --accent-color: #e6d7f0;
-  --text-dark: #4a2b5b;
-  --text-light: #7a5a8c;
-  --bg-cream: #f5f1f8;
-  --shadow: rgba(139, 79, 159, 0.15);
-  --gold: #ffd700;
-  --bright-gold: #fff200;
-  --purple-dark: #6a3d7a;
-  --purple-gradient-start: #8b4f9f;
-  --purple-gradient-end: #6a3d7a;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/*Price page*/
 
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(
-    135deg,
-    var(--purple-gradient-start) 0%,
-    var(--purple-gradient-end) 50%,
-    #5a326b 100%
-  );
-  color: var(--text-dark);
+  background: linear-gradient(135deg, #8b4f9f 0%, #6a3d7a 50%, #5a326b 100%);
+  color: #4a2b5b;
   overflow-x: hidden;
   position: relative;
 }
@@ -162,7 +137,7 @@ body {
   font-family: "Dancing Script", cursive;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--bright-gold);
+  color: #fff200;
   margin-bottom: 0.5rem;
   line-height: 1;
   opacity: 0;
@@ -197,7 +172,7 @@ body {
   border-radius: 20px;
   padding: 2.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 40px var(--shadow);
+  box-shadow: 0 10px 40px rgba(139, 79, 159, 0.15);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(210, 180, 140, 0.2);
   transition: all 0.4s ease;
@@ -206,22 +181,9 @@ body {
   animation: slideInUp 0.8s ease forwards;
 }
 
-.service-category:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.service-category:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.service-category:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.service-category:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
 .service-category:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 60px var(--shadow);
+  box-shadow: 0 20px 60px rgba(139, 79, 159, 0.15);
   background: rgba(255, 255, 255, 0.25);
 }
 
@@ -236,12 +198,12 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--bright-gold);
+  color: #fff200;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 2px solid #ffd700;
   position: relative;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -253,7 +215,7 @@ body {
   left: 0;
   width: 30px;
   height: 2px;
-  background: var(--bright-gold);
+  background: #fff200;
   transition: width 0.3s ease;
 }
 
@@ -297,7 +259,7 @@ body {
 }
 
 .service-item:hover .service-name {
-  color: var(--bright-gold);
+  color: #fff200;
   font-weight: 500;
 }
 
@@ -305,24 +267,20 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--gold);
+  color: #ffd700;
   min-width: 80px;
   text-align: right;
 }
 
 /*Special Offers*/
 .special-offers {
-  background: linear-gradient(
-    135deg,
-    var(--purple-gradient-start),
-    var(--purple-gradient-end)
-  );
+  background: linear-gradient(135deg, #8b4f9f, #6a3d7a);
   color: white;
   border-radius: 25px;
   padding: 3rem;
   margin: 3rem 0;
   text-align: center;
-  box-shadow: 0 15px 50px var(--shadow);
+  box-shadow: 0 15px 50px rgba(139, 79, 159, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -342,22 +300,13 @@ body {
   animation: shimmer 4s linear infinite;
 }
 
-@keyframes shimmer {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .offers-title {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
   position: relative;
-  z-index: 1;
+
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -366,7 +315,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   position: relative;
-  z-index: 1;
 }
 
 .offer-card {
@@ -400,165 +348,12 @@ body {
 .offer-price {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--bright-gold);
-}
-
-/*Contact section*/
-.contact-section {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 25px;
-  margin: 3rem 0;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 10px 40px var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.contact-title {
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--bright-gold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.contact-item {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.contact-item:hover {
-  color: var(--bright-gold);
-}
-
-.contact-item i {
-  font-size: 1.2rem;
-  color: var(--gold);
-}
-
-/*Book Button*/
-.book-btn {
-  background: linear-gradient(135deg, var(--gold), var(--bright-gold));
-  color: var(--purple-dark);
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
-  text-decoration: none;
-  display: inline-block;
-  margin: 1rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.book-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: left 0.5s;
-}
-
-.book-btn:hover::before {
-  left: 100%;
-}
-
-.book-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
-}
-
-/*Dots*/
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-top: 2rem;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--gold);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.dot:hover {
-  background: var(--bright-gold);
-  transform: scale(1.5);
+  color: #fff200;
 }
 
 /*Gender Icon*/
 .category-icon {
   font-size: 1.5rem;
   margin-right: 0.5rem;
-  color: var(--gold);
-}
-
-/*Responsive Design*/
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 3rem;
-  }
-
-  .service-category {
-    padding: 2rem 1.5rem;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .offers-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .page-title {
-    font-size: 2.5rem;
-  }
-
-  .service-category {
-    padding: 1.5rem 1rem;
-  }
-
-  .book-btn {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-  }
+  color: #ffd700;
 }
