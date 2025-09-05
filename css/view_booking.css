@@ -1,0 +1,29 @@
+.booking-container{
+    padding: 2rem 0;
+}
+
+.table-responsive{
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.table th{
+    color: #FFD700;
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.table td{
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+btn-sm{
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.alert{
+    border-radius: 10px;
+}

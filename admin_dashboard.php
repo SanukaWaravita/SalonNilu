@@ -111,7 +111,7 @@ if($result_services) {
                     <i class="fas fa-calendar-check feature-icon"></i>
                     <h4>View Bookings</h4>
                     <p>See all customer appointments and manage schedules</p>
-                    <a href="view_bookings.php" class="btn btn-primary mt-2">Manage</a>
+                    <a href="view_booking.php" class="btn btn-primary mt-2">Manage</a>
                 </div>
             </div>
             <div class="col-md-4">
