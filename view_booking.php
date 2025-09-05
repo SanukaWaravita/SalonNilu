@@ -1,33 +1,48 @@
 <?php
 session_start();
-
 include 'db_connect.php'; 
 
-//check if user logged in
+// Check if user is logged in
 if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
     exit();
 }
 
-// handle booking deletion
+// Handle booking deletion
 if(isset($_GET['delete_id'])){
     $delete_id = $_GET['delete_id'];
-    $delete_sql = "DELETE FROM bookings WHERE id = ?";
+    $delete_sql = "DELETE FROM booking WHERE id = ?";
     $stmt = $conn->prepare($delete_sql);
     $stmt->bind_param("i", $delete_id);
 
     if($stmt->execute()){
         $success_message = "Booking deleted successfully.";
-    }
-    else{
-        $error_message = "Error deleting booking: ";
+
+        // Check if table is empty, then reset AUTO_INCREMENT
+        $check_empty = $conn->query("SELECT COUNT(*) AS count FROM booking");
+        $row = $check_empty->fetch_assoc();
+        if($row['count'] == 0){
+            $conn->query("ALTER TABLE booking AUTO_INCREMENT = 1");
+        }
+
+    } else {
+        $error_message = "Error deleting booking.";
     }
     $stmt->close();
+
+    header("Location: view_booking.php");
+    exit();
 }
 
-// get booking data from database
-$sql = "SELECT * FROM booking ORDER BY booking_date DESC, booking_time DESC";
+// Get booking data from database
+$sql = "
+    SELECT b.*, s.service_name 
+    FROM booking b
+    LEFT JOIN services s ON b.service_id = s.id
+    ORDER BY b.booking_date DESC, b.booking_time DESC
+";
 $result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -56,20 +71,18 @@ $result = $conn->query($sql);
                         <a href="view_booking.php" class="nav-link active">View Bookings</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a href="logout.php" class="btn btn-danger btn-sm px-3">
-                            Logout
-                        </a>
+                        <a href="logout.php" class="btn btn-danger btn-sm px-3">Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     <div class="container bookings-container">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center mb-4" style="color: #FFD700;">Customer Bookings</h2>
-                
+
                 <?php if(isset($success_message)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?php echo $success_message; ?>
@@ -110,7 +123,7 @@ $result = $conn->query($sql);
                                 <td><?php echo $row['booking_date']; ?></td>
                                 <td><?php echo $row['booking_time']; ?></td>
                                 <td>
-                                    <a href="view_bookings.php?delete_id=<?php echo $row['id']; ?>" 
+                                    <a href="view_booking.php?delete_id=<?php echo $row['id']; ?>" 
                                        class="btn btn-danger btn-sm"
                                        onclick="return confirm('Are you sure you want to delete this booking?')">
                                         Delete
@@ -134,10 +147,7 @@ $result = $conn->query($sql);
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 <?php
-// Close database connection
 $conn->close();
 ?>
-    
-</body>
-</html>

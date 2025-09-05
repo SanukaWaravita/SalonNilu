@@ -1,5 +1,14 @@
 <?php
 session_start();
+include 'db_connect.php';
+
+$services = [];
+$result = $conn->query("SELECT id,service_name FROM services ORDER BY id");
+if($result){
+    while($row = $result->fetch_assoc()){
+        $services[$row['id']] = $row['service_name'];
+    }
+}
 
 // process form submission
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -9,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   $phone = htmlspecialchars($_POST['phone']);
   $date = htmlspecialchars($_POST['date']);
   $time = htmlspecialchars($_POST['time']);
-  $package = htmlspecialchars($_POST['package']);
+  $service_id = htmlspecialchars($_POST['service_id']);
 
 
   // validating inputs
@@ -46,21 +55,20 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
   }
   
-  if(empty($package)){
-    $errors[] = "Please select a package";
+  if(empty($service_id) || !array_key_exists($service_id, $services)){
+    $errors[] = "Please select a service";
   }
 
   // if any errors store them in session
   if(!empty($errors)){
     $_SESSION['error'] = implode(" ", $errors);
-
     $_SESSION['firstname'] = $firstname;
     $_SESSION['lastname'] = $lastname;
     $_SESSION['email'] = $email;
     $_SESSION['phone'] = $phone;
     $_SESSION['date'] = $date;
     $_SESSION['time'] = $time;
-    $_SESSION['package'] = $package;
+    $_SESSION['service_id'] = $service_id;
 
     header('Location: ' . $_SERVER['PHP_SELF']);
     exit;
@@ -70,29 +78,34 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
   // clear previous data
 
-  unset($_SESSION['firstname']);
-  unset($_SESSION['lastname']);
-  unset($_SESSION['email']);
-  unset($_SESSION['phone']);
-  unset($_SESSION['date']);
-  unset($_SESSION['time']);
-  unset($_SESSION['package']);
+  unset($_SESSION['firstname'], $_SESSION['lastname'], $_SESSION['email'], $_SESSION['phone'], $_SESSION['date'], $_SESSION['time'], $_SESSION['service_id']);
 
-  // success msg
-  $_SESSION['success'] = "Your appointment has been booked successfully! We'll confirm shortly.";
+    // insert booking into database
+    $stmt = $conn->prepare("INSERT INTO booking (firstname, lastname, email, phone, booking_date, booking_time, service_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssi", $firstname, $lastname, $email, $phone, $date, $time, $service_id);
 
-  // redirecting
-  header('Location: ' . $_SERVER['PHP_SELF']);
-  exit;
+    if($stmt->execute()){
+        $_SESSION['success'] = "Your appointment has been booked successfully! We'll confirm shortly.";
+    } else {
+        $_SESSION['error'] = "Something went wrong. Please try again.";
+    }
+
+    $stmt->close();
+    $conn->close();
+
+    // redirect to show message
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
 }
-  // intialize variables with session data
-  $firstname = $_SESSION['firstname'] ?? '';
-  $lastname = $_SESSION['lastname'] ?? '';
-  $email = $_SESSION['email'] ?? '';
-  $phone = $_SESSION['phone'] ?? '';
-  $date = $_SESSION['date'] ?? '';
-  $time = $_SESSION['time'] ?? '';
-  $package = $_SESSION['package'] ?? '';
+
+// initialize variables with session data
+$firstname = $_SESSION['firstname'] ?? '';
+$lastname = $_SESSION['lastname'] ?? '';
+$email = $_SESSION['email'] ?? '';
+$phone = $_SESSION['phone'] ?? '';
+$date = $_SESSION['date'] ?? '';
+$time = $_SESSION['time'] ?? '';
+$service_id = $_SESSION['service_id'] ?? '';
 ?>
 
 
@@ -346,15 +359,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
           </div>
 
           <div class="form-group">
-            <label for="package">Select Package</label>
-            <select id="package" name="package" required aria-label="Select Package">
-              <option value="" disabled <?php echo empty($package) ? 'selected' : '' ?>>Choose a package...</option>
-              <option value="basic" <?php echo $package === 'basic' ? 'selected' : '' ?>>Basic Package</option>
-              <option value="premium" <?php echo $package === 'premium' ? 'selected' : '' ?>>Premium Package</option>
-              <option value="bridal" <?php echo $package === 'bridal' ? 'selected' : '' ?>>Bridal Package</option>
+            <label for="service_id">Select Service</label>
+            <select name="service_id" id="service_id" required>
+              <option value="" disabled <?php echo empty($service_id) ? 'selected' : ''; ?>>Choose a service...</option>
+              <?php foreach($services as $id => $name): ?>
+                  <option value="<?php echo $id; ?>" <?php echo $service_id == $id ? 'selected' : ''; ?>>
+                    <?php echo htmlspecialchars($name); ?>
+                  </option>
+              <?php endforeach; ?>
             </select>
-            
-            <div class="error-message" id="package-error"></div>
           </div>
 
           <button type="submit" class="btn btn-primary" id="submit-btn">Book Now</button>
@@ -534,9 +547,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             }
             break;
 
-          case 'package':
+          case 'service_id':
             if(value === ''){
-              errorMessage = 'Please select a package';
+              errorMessage = 'Please select a service';
               isValid = false;
             }
             break;
