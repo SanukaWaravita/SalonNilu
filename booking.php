@@ -1,3 +1,101 @@
+<?php
+session_start();
+
+// process form submission
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+  $firstname = htmlspecialchars($_POST['firstname']);
+  $lastname = htmlspecialchars($_POST['lastname']);
+  $email = htmlspecialchars($_POST['email']);
+  $phone = htmlspecialchars($_POST['phone']);
+  $date = htmlspecialchars($_POST['date']);
+  $time = htmlspecialchars($_POST['time']);
+  $package = htmlspecialchars($_POST['package']);
+
+
+  // validating inputs
+  $errors = [];
+
+  if(empty($firstname)){
+    $errors[] = "First name is required";
+  }
+
+  if(empty($lastname)){
+    $errors[] = "Last name is required";
+  }
+
+  if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
+    $errors[] = "Valid email is required";
+  }
+
+  if(empty($phone) || !preg_match("/^[0-9]{10}$/", $phone)){
+    $errors[] = "Valid phone number is required";
+  }
+
+  if(empty($date) || strtotime($date) < strtotime('today')){
+    $errors[] = "Valid date is required";
+  }
+
+  if(empty($time)){
+    $errors[] = "Time is required";
+  }
+  else{
+    $timeParts = explode(':', $time);
+    $hour = (int)$timeParts[0];
+    if($hour < 9 || $hour > 17){
+      $errors[] = "Please select a time between 9 AM to 6 PM";
+    }
+  }
+  
+  if(empty($package)){
+    $errors[] = "Please select a package";
+  }
+
+  // if any errors store them in session
+  if(!empty($errors)){
+    $_SESSION['error'] = implode(" ", $errors);
+
+    $_SESSION['firstname'] = $firstname;
+    $_SESSION['lastname'] = $lastname;
+    $_SESSION['email'] = $email;
+    $_SESSION['phone'] = $phone;
+    $_SESSION['date'] = $date;
+    $_SESSION['time'] = $time;
+    $_SESSION['package'] = $package;
+
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
+  }
+
+  // if no errors process the booking
+
+  // clear previous data
+
+  unset($_SESSION['firstname']);
+  unset($_SESSION['lastname']);
+  unset($_SESSION['email']);
+  unset($_SESSION['phone']);
+  unset($_SESSION['date']);
+  unset($_SESSION['time']);
+  unset($_SESSION['package']);
+
+  // success msg
+  $_SESSION['success'] = "Your appointment has been booked successfully! We'll confirm shortly.";
+
+  // redirecting
+  header('Location: ' . $_SERVER['PHP_SELF']);
+  exit;
+}
+  // intialize variables with session data
+  $firstname = $_SESSION['firstname'] ?? '';
+  $lastname = $_SESSION['lastname'] ?? '';
+  $email = $_SESSION['email'] ?? '';
+  $phone = $_SESSION['phone'] ?? '';
+  $date = $_SESSION['date'] ?? '';
+  $time = $_SESSION['time'] ?? '';
+  $package = $_SESSION['package'] ?? '';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -141,92 +239,125 @@
           get back to you shortly to confirm.
         </p>
 
-        <!-- booking success msg -->
-        <div id="success-message" class="success-message" style="display: none;">
-          <i class="bi bi-check-circle-fill"></i> Your appointment has been booked successfully!
+        <!-- error msg -->
+        <?php if(isset($_SESSION['error'])): ?>
+        <div id="error-message" class="error-message">
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <?php echo $_SESSION['error']; ?>
         </div>
+        <?php unset($_SESSION['error']); ?>
+        <?php endif; ?>
+
+        <!-- booking success msg -->
+        <?php if(isset($_SESSION['success'])): ?>
+        <div id="success-message" class="success-message">
+          <i class="bi bi-check-circle-fill"></i>
+          <?php echo $_SESSION['success']; ?>
+        </div>
+        <?php unset($_SESSION['success']); ?>
+        <?php endif; ?>
 
         <form class="booking-form" action="#" method="post" novalidate id="bookingForm">
           <div class="form-now">
             <div class="form-group">
+              <label for="firstname">First Name</label>
               <input
                 type="text"
                 id="firstname"
                 name="firstname"
                 placeholder=" "
+                value="<?php echo htmlspecialchars($firstname); ?>"
                 required aria-label="First Name"
               />
-              <label for="firstname">First Name</label>
+              
+              <div class="error-message" id="firstname-error"></div>
             </div>
 
             <div class="form-group">
+              <label for="lastname">Last Name</label>
               <input
                 type="text"
                 id="lastname"
                 name="lastname"
-                placeholder=" "
+                value="<?php echo htmlspecialchars($lastname); ?>"
                 required aria-label="Last Name"
               />
-              <label for="lastname">Last Name</label>
+              
+              <div class="error-message" id="lastname-error"></div>
             </div>
           </div>
 
           <div class="form-group">
+            <label for="email">Email</label>
             <input
               type="email"
               id="email"
-              name="email"
-              placeholder=" "
+              name="email"              
+              value="<?php echo htmlspecialchars($email); ?>"
               required aria-label="Email"
             />
-            <label for="email">Email</label>
+            
+          <div class="error-message" id="email-error"></div>
           </div>
 
           <div class="form-group">
+            <label for="phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
-              name="phone"
-              placeholder=" "
+              name="phone"              
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              value="<?php echo htmlspecialchars($phone); ?>"
               required aria-label="Phone Number"
             />
-            <label for="phone">Phone Number</label>
+            
+            <div class="error-message" id="phone-error"></div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
+              <label for="date">Date</label>
               <input 
                 type="date" 
                 id="date" 
                 name="date" 
+                value="<?php echo htmlspecialchars($date); ?>"
+                min="<?php echo date('Y-m-d'); ?>"
                 required aria-label="Appointment Date"
               />
-              <label for="date">Date</label>
+              
+              <div class="error-message" id="date-error"></div>
             </div>
 
             <div class="form-group">
+              <label for="time">Time</label>
               <input 
                 type="time" 
                 id="time" 
                 name="time" 
+                value="<?php echo htmlspecialchars($time); ?>"
+                min="09:00"
+                max="18:00"
                 required aria-label="Appointment Time"
               />
-              <label for="time">Time</label>
+              
+              <div class="error-message" id="time-error"></div>
             </div>
           </div>
 
           <div class="form-group">
-            <select id="package" name="package" required aria-label="Select Package">
-              <option value="" disabled selected>Choose a package...</option>
-              <option value="basic">Basic Package</option>
-              <option value="premium">Premium Package</option>
-              <option value="bridal">Bridal Package</option>
-            </select>
             <label for="package">Select Package</label>
+            <select id="package" name="package" required aria-label="Select Package">
+              <option value="" disabled <?php echo empty($package) ? 'selected' : '' ?>>Choose a package...</option>
+              <option value="basic" <?php echo $package === 'basic' ? 'selected' : '' ?>>Basic Package</option>
+              <option value="premium" <?php echo $package === 'premium' ? 'selected' : '' ?>>Premium Package</option>
+              <option value="bridal" <?php echo $package === 'bridal' ? 'selected' : '' ?>>Bridal Package</option>
+            </select>
+            
+            <div class="error-message" id="package-error"></div>
           </div>
 
-          <button type="submit" class="btn btn-primary">Book Now</button>
+          <button type="submit" class="btn btn-primary" id="submit-btn">Book Now</button>
         </form>
 
         <p class="booking-note">
@@ -286,10 +417,176 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
-      document.getElementById("bookingForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        document.getElementById("success-message").style.display = "block";
-        this.reset();
+      
+      document.addEventListener('DOMContentLoaded', function(){
+        const form = document.getElementById('bookingForm');
+        const submitBtn = document.getElementById('submit-btn');
+
+        // setting minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // setting time 9-6
+        const timeInput = document.getElementById('time');
+        timeInput.min = "09:00";
+        timeInput.max = "18:00";
+
+        // real time validation
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.addEventListener('blur', validateField);
+          input.addEventListener('input', clearError);
+        });
+
+        // form submission
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // validate all fields
+          let isValid = true;
+          inputs.forEach(input => {
+            if(!validateField.call(input)){
+              isValid = false;
+            }
+          });
+
+          if(isValid){
+            // loading state
+            submitBtn.classList.add('btn-loading');
+            submitBtn.disabled = true;
+            // submit form
+            this.submit();
+          }
+        });
+
+        // field validate function
+        function validateField(){
+          const field = this;
+          const value = field.value.trim();
+          const fieldName = field.name;
+          const errorElement = document.getElementById(`${fieldName}-error`);
+
+          let isValid = true;
+          let errorMessage = '';
+
+          // clear previous error
+          field.classList.remove('error');
+
+          // validate based on field type
+          switch(fieldName){
+            case 'firstname':
+            case 'lastname':
+              if(value === ''){
+                errorMessage = 'This field is required';
+                isValid = false;
+              }
+              else if(value.length < 2){
+                errorMessage = 'Must be at least 2 characters';
+                isValid = false;
+              }
+              break;
+            
+            case 'email':
+              if(value === ''){
+              errorMessage = "Please enter a valid email";
+              isValid = false;
+            }
+            else if(!isValidEmail(value)){
+              errorMessage = 'Please enter a valid email';
+              isValid = false;
+            }
+            break;
+
+          case 'phone':
+            if(value === ''){
+              errorMessage = 'Phone number is required';
+              isValid = false;          
+            }
+            else if(!/^\d{10}$/.test(value)){
+              errorMessage = 'Please enter a 10-digit number';
+              isValid = false;
+            }
+            break;
+          
+          case 'date':
+            if(value === ''){
+              errorMessage = 'Date is required';
+              isValid = false;
+            }
+            else if(new Date(value) < new Date(today)){
+              errorMessage = "please select a future date.";
+              isValid = false;
+            }
+            break;
+          
+          case 'time':
+            if(value === ''){
+              errorMessage = 'Time is required';
+              isValid = false;
+            }
+            else{
+              const hours = parseInt(value.split(':')[0]);
+              if(hours < 9 || hours > 17){
+                errorMessage = "please enter a time between 9 AM to 6 PM";
+                isValid = false;
+              }
+            }
+            break;
+
+          case 'package':
+            if(value === ''){
+              errorMessage = 'Please select a package';
+              isValid = false;
+            }
+            break;
+          }
+
+          // update error display
+          if(!isValid){
+            field.classList.add('error');
+            if(errorElement){
+              errorElement.textContent = errorMessage;
+              errorElement.style.display = 'block';
+            }
+          }
+          else if(errorElement){
+            errorElement.style.display = 'none';
+          }
+          return isValid;
+        }
+
+        // clear error function
+        function clearError(){
+          this.classList.remove('error');
+          const errorElement = document.getElementById(`${this.name}-error`);
+
+          if(errorElement){
+            errorElement.style.display = 'none';
+          }
+        }
+
+        // email validation
+        function isValidEmail(email){
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+        }
+
+        // hide success\/ error msg after 5 sec
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+
+        if(successMessage){
+          setTimeout(() => {
+            successMessage.style.display = 'none';
+          }, 5000);
+        }
+
+        if(errorMessage){
+          setTimeout(() => {
+            errorMessage.style.display = 'none';
+          }, 5000);
+        }
       });
     </script>
   </body>

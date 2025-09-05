@@ -213,31 +213,33 @@
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
-.form-group label{
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    color: rgba(255, 215, 0, 0.8);
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(255, 215, 0);
     font-weight: 600;
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: 0.3s ease all;
-    background-color: transparent;
-    padding: 0 5px;
-    z-index: 1;
+    font-size: 1.1rem;
+    margin-left: 8px;
 }
 
-.form-group input:focus + label,
-.form-group input:valid + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group select:focus + label,
-.form-group select:not([value=""]) + label,
-.form-group select:valid + label {
-    top: -8px;
-    font-size: 1rem;
-    color: rgb(255, 215, 0);
-    background-color: rgba(43, 8, 57, 0.8);
-    border-radius: 6px;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: rgb(255, 215, 0);
+    background-color: rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
 select#package{
@@ -427,4 +429,250 @@ select#package:focus{
 .footer-bottom p{
     margin: 0;
     letter-spacing: 0.5px;
+}
+
+.error-message{
+    background: rgba(255, 0, 0, 0.15);
+    border : 2px solid #ff6b6b;
+    padding : 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #ff6b6b;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-message i{
+    font-size: 1.4rem;
+}
+
+.form-group.error input,
+.form-group.error select{
+    border-color:#ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+.form-group.error label {
+    color: #ff6b6b !important;
+}
+
+.form-group .error-message {
+    display: none;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid rgba(255, 215, 0, 0.8);
+    outline-offset: 2px;
+}
+
+
+.form-group input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.form-group input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.form-group input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.form-group input::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+}
+
+input[type="date"]:invalid,
+input[type="time"]:invalid {
+    border-color: #ff6b6b;
+}
+
+.form-group select option:hover {
+    background-color: rgba(255, 215, 0, 0.2) !important;
+}
+
+.success-message {
+    background: rgba(0, 128, 0, 0.15);
+    border: 2px solid limegreen;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: limegreen;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-message i {
+    font-size: 1.4rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.form-group.error {
+    animation: shake 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .form-row,
+    .form-now {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .booking-title {
+        font-size: 2.2rem;
+    }
+    
+    .booking-description {
+        font-size: 1rem;
+    }
+    
+    .booking-form {
+        padding: 20px 15px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+    
+    .booking-form .btn-primary {
+        padding: 12px 0;
+        font-size: 1.2rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-card {
+        min-width: 100%;
+    }
+}
+
+@media print {
+    .navbar,
+    .footer,
+    .booking-form .btn-primary {
+        display: none !important;
+    }
+    
+    .booking-section {
+        background: white !important;
+        color: black !important;
+        padding: 20px !important;
+    }
+    
+    .booking-title {
+        color: black !important;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .form-group input,
+    .form-group select {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+.form-group input,
+.form-group select,
+.form-group label,
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:not([value=""]) + label {
+    top: -8px !important;
+    font-size: 0.9rem !important;
+    background-color: rgba(43, 8, 57, 0.9) !important;
+    padding: 0 8px !important;
+}
+
+
+.form-group select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group select::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.form-group select::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 4px;
+}
+
+.form-group select::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.8);
 }
