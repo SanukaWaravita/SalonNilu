@@ -67,9 +67,7 @@ $result = $conn->query($sql);
                     <li class="nav-item">
                         <a href="admin_dashboard.php" class="nav-link">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="view_booking.php" class="nav-link active">View Bookings</a>
-                    </li>
+                
                     <li class="nav-item ms-lg-3">
                         <a href="logout.php" class="btn btn-danger btn-sm px-3">Logout</a>
                     </li>
@@ -81,7 +79,7 @@ $result = $conn->query($sql);
     <div class="container bookings-container">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center mb-4" style="color: #FFD700;">Customer Bookings</h2>
+                <h2 class="text-center" style="color: #FFD700;">Customer Bookings</h2>
 
                 <?php if(isset($success_message)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
