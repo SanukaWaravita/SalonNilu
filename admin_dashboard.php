@@ -85,19 +85,19 @@ if($result_services) {
             <div class="col-md-4">
                 <div class="stat-card">
                     <div class="stat-number"><?php echo $booking_count; ?></div>
-                    <div class="stat-label">Total Bookings</div>
+                    <div class="stat-label" style="font-size: 1.5rem; font-weight: bold;">Total Bookings</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="stat-card">
                     <div class="stat-number"><?php echo $services_count; ?></div>
-                    <div class="stat-label">Services Offered</div>
+                    <div class="stat-label" style="font-size: 1.5rem; font-weight: bold;">Services Offered</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="stat-card">
                     <div class="stat-number">1</div>
-                    <div class="stat-label">Active Admin</div>
+                    <div class="stat-label" style="font-size: 1.5rem; font-weight: bold;">Active Admin</div>
                 </div>
             </div>
         </div>
@@ -109,25 +109,25 @@ if($result_services) {
             <div class="col-md-4">
                 <div class="feature-card">
                     <i class="fas fa-calendar-check feature-icon"></i>
-                    <h4>View Bookings</h4>
-                    <p>See all customer appointments and manage schedules</p>
+                    <h4 style="font-size: 1.5rem; font-weight: bold; color:aliceblue">View Bookings</h4>
+                    <p style="font-size: 1.1rem; font-weight: bold; font-style:italic">See all customer appointments and manage schedules</p>
                     <a href="view_booking.php" class="btn btn-primary mt-2">Manage</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature-card">
                     <i class="fas fa-scissors feature-icon"></i>
-                    <h4>Manage Services</h4>
-                    <p>Add, edit, or remove services and prices</p>
+                    <h4 style="font-size: 1.5rem; font-weight: bold; color:aliceblue">Manage Services</h4>
+                    <p style="font-size: 1.1rem; font-weight: bold; font-style:italic">Add, edit, or remove services and prices</p>
                     <a href="manage_services.php" class="btn btn-primary mt-2">Manage</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature-card">
                     <i class="fas fa-users feature-icon"></i>
-                    <h4>Manage Users</h4>
-                    <p>Add staff members or other administrators</p>
-                    <a href="manage_users.php" class="btn btn-primary mt-2">Manage</a>
+                    <h4 style="font-size: 1.5rem; font-weight: bold; color:aliceblue">Manage Users</h4>
+                    <p style="font-size: 1.1rem; font-weight: bold; font-style:italic">Add staff members or other administrators</p>
+                    <a href="manage_users.php" class="btn btn-primary">Manage</a>
                 </div>
             </div>
         </div>
