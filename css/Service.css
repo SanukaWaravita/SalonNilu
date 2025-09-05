@@ -134,24 +134,18 @@ padding: 40px 30px 30px 30px;
 
 
 .category-section h2 {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    color: #7c3aed;
-    font-weight: 800;
-    font-size: 2.3rem;
-    letter-spacing: 1.5px;
-    background: linear-gradient(90deg, #f8fafc 0%, #e0c3fc 100%);
-    border-radius: 12px;
-    padding: 16px 0 14px 0;
-    margin-bottom: 36px;
-    box-shadow: 0 4px 18px 0 rgba(124,58,237,0.08);
-    text-shadow: 0 2px 8px #e0c3fc99;
-    transition: color 0.3s, box-shadow 0.3s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #6d28d9; /* Deep purple, matches your navbar and buttons */
+    font-weight: 700;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    border-left: 6px solid #ffd600; /* Gold accent, matches your buttons */
+    padding-left: 18px;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
 }
-.category-section h2:hover {
-    color: #a21caf;
-    box-shadow: 0 6px 24px 0 rgba(162,28,175,0.13);
-}
-
 
 
 @media (max-width: 991px) {
