@@ -145,7 +145,7 @@ $service_id = $_SESSION['service_id'] ?? '';
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -217,15 +217,15 @@ $service_id = $_SESSION['service_id'] ?? '';
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
+              <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="price.html">Pricing</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="About_us.html">About</a>
             </li>
 
             <li class="nav-item">
@@ -233,7 +233,7 @@ $service_id = $_SESSION['service_id'] ?? '';
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
 
             <li class="nav-item ms-lg-3">
