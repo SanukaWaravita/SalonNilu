@@ -9,7 +9,7 @@ $message = '';
 
 if(isset($_POST['submit'])){
     $username = trim($_POST['username']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
     $role = $_POST['role'];
 
     $stmt = $conn->prepare("INSERT INTO users (username,password,role) VALUES (?,?,?)");
