@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Salon Nilu</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/contactstyles.css">
   <link rel="stylesheet" href="css/commoncomponents.css">
+  <link rel="stylesheet" href="css/contactstyles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
 </head>
@@ -16,19 +16,7 @@
   
   <?php include 'navbar.php'; ?>
   <div id="primaryContainer" class="container">
-    <div class="row">
-      <div class="container">
-        <div id="salonNameLogo" class="row p-2">
-          <div class="col-2"></div>
-          <div id="columnWithLogo" class="col-2 p-2 text-center">
-            <img src="images/homepage/logo.png" alt="logo" id="logoImg" class="logo m-2">
-          </div>
-          <div id="columnWithName" class="col-6 d-flex justify-content-center align-items-center">
-            Salon Nilu
-          </div>
-          <div class="col-2"></div>
-        </div>
-      </div>
+    
       <div class="container">
         <h1 id="getInTouchWithUs" class="text-center">Get in Touch with Us</h1>
         <p class="text-center">We would love to hear from you.</p>
