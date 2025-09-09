@@ -126,10 +126,13 @@
 }
 .banner-detail-box h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #222;
     margin-bottom: 12px;
     text-align: center;
+}
+.banner-detail-box p {
+   font-weight: 320;
 }
 
 /* --- Category Section Titles --- */
@@ -152,8 +155,8 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    height: 460px;       /* Fixed height for all cards */
-    max-width: 350px;    /* Fixed width for all cards */
+    height: 460px;       
+    max-width: 350px;    
     margin: 0 auto;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -165,7 +168,7 @@
 
 .service-card img {
     width: 100%;
-    height: 220px;       /* Uniform image height */
+    height: 220px;       
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     background: #ececec;
