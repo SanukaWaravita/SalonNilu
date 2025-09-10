@@ -239,7 +239,7 @@
         </div>
 
         <div class="text-center mt-4">
-          <a href="gallery.html" class="btn btn-primary btn-lg px-5">View Gallery</a>
+          <a href="gallery.php" class="btn btn-primary btn-lg px-5">View Gallery</a>
         </div>
       </div>
     </section>
@@ -309,7 +309,7 @@
           </div>
         </div>
 
-        <a href="price.html" class="btn btn-primary btn-lg mt-4">See All Pricing</a>
+        <a href="price.php" class="btn btn-primary btn-lg mt-4">See All Pricing</a>
       </div>
     </section>
 
