@@ -42,11 +42,11 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <li><a class="dropdown-header" href="service.php#men">Men's Services</a></li>
 
 
-            <li><a class="dropdown-header" href="#">Women's Services</a></li>
+            <li><a class="dropdown-header" href="service.php#women">Women's Services</a></li>
             
 
-            <li><a class="dropdown-header" href="#">Bridal Services</a></li>
-            
+            <li><a class="dropdown-header" href="service.php#bridal">Bridal Services</a></li>
+
           </ul>
         </li>
 
