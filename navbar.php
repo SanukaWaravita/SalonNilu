@@ -2,7 +2,7 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
-<nav class="navbar navbar-expand-lg shadow-sm py-3">
+<nav class="navbar navbar-expand-lg shadow-sm py-3 fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.php">
       <img src="images/homepage/logo.png" alt="Logo" class="logo me-2" />
