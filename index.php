@@ -57,7 +57,7 @@
                 Haircuts, beard grooming and styling designed for the modern
                 gentleman.
               </p>
-              <a href="#" class="btn btn-outline-light btn-sm mt-2"
+              <a href="service.php#men" class="btn btn-outline-light btn-sm mt-2"
                 >Learn More</a
               >
             </div>
@@ -74,7 +74,7 @@
               <p>
                 Hair coloring, facials and treatments to enhance natural beauty.
               </p>
-              <a href="#" class="btn btn-outline-light btn-sm mt-2"
+              <a href="service.php#women" class="btn btn-outline-light btn-sm mt-2"
                 >Learn More</a
               >
             </div>
@@ -91,7 +91,7 @@
               <p>
                 Makeup, hair styling and full packages for your special day.
               </p>
-              <a href="#" class="btn btn-outline-light btn-sm mt-2"
+              <a href="service.php#bridal" class="btn btn-outline-light btn-sm mt-2"
                 >Learn More</a
               >
             </div>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="text-center mt-4">
-          <a href="Service.html" class="see-all-btn">See All Services</a>
+          <a href="Service.php" class="see-all-btn">See All Services</a>
         </div>
       </div>
     </section>
@@ -127,7 +127,7 @@
               yourself to a new style, we ensure a relaxing, customized
               experience just for you.
             </p>
-            <a href="About_Us.html" class="btn btn-primary mt-3">Learn More</a>
+            <a href="About_Us.php" class="btn btn-primary mt-3">Learn More</a>
           </div>
         </div>
       </div>
