@@ -24,72 +24,120 @@
       </div>
     </div>
     <br />
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <div class="row g-0 mb-4">
-          <div class="col-12">
-            <div class="contact-card p-4" id="contact_card">
-              <h2 class="m-4 mb-4">Send Us a Message</h2>
-              <form>
-                <div class="container p-4">
-                  <div class="row mb-4">
-                    <div class="col-md-6 mb-4">
-                      <label for="firstName" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="firstName" required
-                        placeholder="Enter your first name" />
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <label for="lastName" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="lastName" required
-                        placeholder="Enter your last name" />
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-6 mb-4">
-                      <label for="email" class="form-label">Email Address</label>
-                      <input type="email" class="form-control" id="email" required
-                        placeholder="Enter your email address" />
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <label for="phone" class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" id="phone" required
-                        placeholder="Enter your phone number" />
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-6 mb-4">
-                        <label for="reasonForContact" class="form-label">Reason for Contact</label>
-                        <select class="form-control" id="reasonForContact" required>
-                            <option value="">Select a reason...</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="appointment">Appointment</option>
-                            <option value="feedback">Feedback</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" required
-                            placeholder="Enter the subject of your message" />
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-12">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control" id="message" rows="6" placeholder="Tell us how we can help you..."
-                        required></textarea>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit" id="SendMessageBtn" class="btn btn-primary btn-lg">
-                      <i class="fas fa-paper-plane me-2"></i>Send Message
-                    </button>
-                  </div>
+    
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div class="row g-0 mb-4">
+      <div class="col-12">
+        <div class="contact-card p-4" id="contact_card">
+          <h2 class="m-4 mb-4">Send Us a Message</h2>
+
+          <?php
+          // Include database connection
+          include 'db_connect.php';
+
+          // Initialize variables and message
+          $firstname = $lastname = $email = $phone = $reason = $subject = $message = '';
+          $success_msg = $error_msg = '';
+
+          // Check if form is submitted
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Sanitize and validate input data
+            $firstname = htmlspecialchars(trim($_POST['firstname']));
+            $lastname = htmlspecialchars(trim($_POST['lastname']));
+            $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+            $phone = htmlspecialchars(trim($_POST['phone']));
+            $reason = htmlspecialchars(trim($_POST['reasonForContact']));
+            $subject = htmlspecialchars(trim($_POST['subject']));
+            $message = htmlspecialchars(trim($_POST['message']));
+
+            // Basic validation
+            if (!empty($firstname) && !empty($lastname) && !empty($email) && !empty($phone) && !empty($reason) && !empty($subject) && !empty($message)) {
+              
+              // Prepare an INSERT statement
+              $stmt = $conn->prepare("INSERT INTO contacts (first_name, last_name, email, phone, contact_reason, subject, message) VALUES (?, ?, ?, ?, ?, ?, ?)");
+              $stmt->bind_param("sssssss", $firstname, $lastname, $email, $phone, $reason, $subject, $message);
+
+              // Execute the query
+              if ($stmt->execute()) {
+                $success_msg = "Your message has been sent successfully! We will get back to you soon.";
+                // Clear form fields
+                $firstname = $lastname = $email = $phone = $reason = $subject = $message = '';
+              } else {
+                $error_msg = "Sorry, there was an error sending your message. Please try again later.";
+              }
+              $stmt->close();
+            } else {
+              $error_msg = "Please fill in all required fields.";
+            }
+            $conn->close();
+          }
+          ?>
+
+          <!-- Display Success or Error Messages -->
+          <?php if (!empty($success_msg)): ?>
+            <div class="alert alert-success"><?php echo $success_msg; ?></div>
+          <?php endif; ?>
+          <?php if (!empty($error_msg)): ?>
+            <div class="alert alert-danger"><?php echo $error_msg; ?></div>
+          <?php endif; ?>
+
+          <!-- The Form -->
+          <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <div class="container p-4">
+              <div class="row mb-4">
+                <div class="col-md-6 mb-4">
+                  <label for="firstName" class="form-label">First Name *</label>
+                  <input type="text" class="form-control" id="firstName" name="firstname" value="<?php echo $firstname; ?>" required placeholder="Enter your first name" />
                 </div>
-              </form>
+                <div class="col-md-6 mb-4">
+                  <label for="lastName" class="form-label">Last Name *</label>
+                  <input type="text" class="form-control" id="lastName" name="lastname" value="<?php echo $lastname; ?>" required placeholder="Enter your last name" />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6 mb-4">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" required placeholder="Enter your email address" />
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $phone; ?>" required placeholder="Enter your phone number" />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6 mb-4">
+                    <label for="reasonForContact" class="form-label">Reason for Contact *</label>
+                    <select class="form-control" id="reasonForContact" name="reasonForContact" required>
+                        <option value="">Select a reason...</option>
+                        <option value="general" <?php if ($reason == 'general') echo 'selected'; ?>>General Inquiry</option>
+                        <option value="appointment" <?php if ($reason == 'appointment') echo 'selected'; ?>>Appointment</option>
+                        <option value="feedback" <?php if ($reason == 'feedback') echo 'selected'; ?>>Feedback</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <input type="text" class="form-control" id="subject" name="subject" value="<?php echo $subject; ?>" required placeholder="Enter the subject of your message" />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-12">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required><?php echo $message; ?></textarea>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" name="submit" class="btn btn-primary btn-lg">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
+      </div>
+    </div>
 
         <!-- Opening Hours side by side -->
 

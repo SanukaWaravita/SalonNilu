@@ -130,8 +130,17 @@ if($result_services) {
                     <a href="manage_users.php" class="btn btn-primary">Manage</a>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-envelope feature-icon"></i>
+                    <h4 style="font-size: 1.5rem; font-weight: bold; color:aliceblue">Contact Messages</h4>
+                    <p style="font-size: 1.1rem; font-weight: bold; font-style:italic">View and manage customer inquiries</p>
+                    <a href="manage_contacts.php" class="btn btn-primary mt-2">Manage</a>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
