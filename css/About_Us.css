@@ -28,7 +28,16 @@ h1{
 p{
     text-align: center;
 }
-
+.funfact{
+    color: #fff;
+    display: contents;
+}
+ul{
+    font-size: larger;
+}
+p{
+    font-size: larger;
+}
 
 
 
