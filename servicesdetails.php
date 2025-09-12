@@ -11,86 +11,7 @@
     <title>Our Services</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg shadow-sm py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="images/homepage/logo.png" alt="Logo" class="logo me-2">
-                <span class="brand-name">SalonNilu</span>
-            </a>
-
-            <button class="navbar-toggler" 
-                    type="button"  
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" 
-                            href="#" id="servicesDropdown" 
-                            role="button" 
-                            data-bs-toggle="dropdown" 
-                            aria-expanded="false">
-                            Services</a>
-                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown" style="min-width: 250px;">
-                                    <li class="dropdown-header">Men's Services</li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#hair-care" target="blank">Hair Care & Styling</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#facial-treatments" target="blank">Facial & Skin Treatments</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#beard-grooming" target="blank">Beard Grooming & Shaving</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#hair-coloring" target="blank">Hair Colouring & Highlights</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-
-                                    <li class="dropdown-header">Women's Services</li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#womens-haircuts" target="blank">Haircuts & Styling</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#womens-facials" target="blank">Facials & Skincare</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#manicure-pedicure" target="blank">Manicure & Pedicure</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#womens-coloring" target="blank">Hair Colouring & Highlights</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-
-                                    <li class="dropdown-header">Bridal Services</li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#bridal-hairstyling" target="blank" >Bridal Hairstyling</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#bridal-makeup" target="blank">Bridal Makeup</a></li>
-                                    <li><a class="dropdown-item" href="servicesdetails.html#pre-wedding" target="blank">Couples Pre-Wedding Packages</a></li>   
-                                    <li><a class="dropdown-item" href="servicesdetails.html#reception" target="blank">Engagement & Reception Packages</a></li>                     
-                                </ul>                  </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reviews</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-
-                    <li class="nav-item ms-lg-3">
-                        <a href="#" class="btn btn-primary btn-sm px-4">Book Now</a>
-                    </li>
-                </ul>
-            </div>
-        </div>    
-    </nav>
+  <?php include 'navbar.php';?>
   <!-- Main Content -->
   <main class="container my-5">
     <div class="row">
@@ -445,27 +366,7 @@
   </a>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-5 mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <h5>SalonNilu</h5>
-          <p>Premium beauty and grooming services for men and women. Experience the difference of our expert care.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h5>Contact Us</h5>
-          <p>123 Beauty Street<br>City, State 12345<br>Phone: (555) 123-4567<br>Email: info@salonnilu.com</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h5>Hours</h5>
-          <p>Monday-Friday: 9am-8pm<br>Saturday: 9am-6pm<br>Sunday: 10am-4pm</p>
-        </div>
-      </div>
-      <div class="text-center pt-3 border-top">
-        <p>&copy; 2025 SalonNilu. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <?php include 'footer.php';?>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
