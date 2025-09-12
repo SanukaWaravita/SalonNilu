@@ -39,25 +39,14 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             Services
           </a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown" style="min-width: 250px">
-            <li class="dropdown-header">Men's Services</li>
-            <li><a class="dropdown-item" href="#">Hair Care & Styling</a></li>
-            <li><a class="dropdown-item" href="#">Facial & Skin Treatments</a></li>
-            <li><a class="dropdown-item" href="#">Beard Grooming & Shaving</a></li>
-            <li><a class="dropdown-item" href="#">Hair Colouring & Highlights</a></li>
-            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-header" href="service.php#men">Men's Services</a></li>
 
-            <li class="dropdown-header">Women's Services</li>
-            <li><a class="dropdown-item" href="#">HairCuts & Styling</a></li>
-            <li><a class="dropdown-item" href="#">Facials & Skincare</a></li>
-            <li><a class="dropdown-item" href="#">Manicure & Pedicure</a></li>
-            <li><a class="dropdown-item" href="#">Hair Colouring & Highlights</a></li>
-            <li><hr class="dropdown-divider" /></li>
 
-            <li class="dropdown-header">Bridal Services</li>
-            <li><a class="dropdown-item" href="#">Bridal Hairstyling</a></li>
-            <li><a class="dropdown-item" href="#">Bridal Makeup</a></li>
-            <li><a class="dropdown-item" href="#">Couples PreWedding Packages</a></li>
-            <li><a class="dropdown-item" href="#">Engagement & Reception Packages</a></li>
+            <li><a class="dropdown-header" href="service.php#women">Women's Services</a></li>
+            
+
+            <li><a class="dropdown-header" href="service.php#bridal">Bridal Services</a></li>
+
           </ul>
         </li>
 
