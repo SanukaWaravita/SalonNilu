@@ -50,6 +50,12 @@
             <li class="nav-item">
               <a class="nav-link" href="#bridal-makeup">Bridal Makeup</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pre-wedding">Couples Pre-Wedding Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reception">Engagement & Reception Packages</a>
+            </li>
           </ul>
         </div>
       </div>

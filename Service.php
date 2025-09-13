@@ -153,7 +153,7 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">Couples Pre-wedding Packages</h5>
                                 <p class="card-text">Capture the magic of your love story with our prewedding packages.</p>
-                                <a href="Couples Prewedding Packages.html" class="btn btn-primary">See Details</a>
+                                <a href="servicesdetails.php#pre-wedding" class="btn btn-primary">See Details</a>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">Engagement & Reception Looks</h5>
                                 <p class="card-text">Look stunning on your special day with our engagement and reception styling services.</p>
-                                <a href="Engagement & Reception looks.html" class="btn btn-primary">See Details</a>
+                                <a href="servicesdetails.php#reception" class="btn btn-primary">See Details</a>
                             </div>
                         </div>
                     </div>
