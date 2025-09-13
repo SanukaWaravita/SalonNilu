@@ -287,7 +287,7 @@
           <div class="col-md-4">
             <div class="pricing-card p-4">
               <h4>✂️ Basic Packages</h4>
-              <p class="price">Starting at <strong>Rs.600</strong></p>
+              <p class="price">Starting at <strong>Rs.3000</strong></p>
               <p>Includes haircut, beard grooming and styling</p>
             </div>
           </div>
@@ -295,7 +295,7 @@
           <div class="col-md-4">
             <div class="pricing-card p-4">
               <h4>🌟 Premium Packages</h4>
-              <p class="price">Starting at <strong>Rs.1000</strong></p>
+              <p class="price">Starting at <strong>Rs.8000</strong></p>
               <p>Haircut, facial treatment & manicure or pedicure.</p>
             </div>
           </div>
@@ -303,7 +303,7 @@
           <div class="col-md-4">
             <div class="pricing-card p-4">
               <h4>💍 Bridal Packages</h4>
-              <p class="price">Starting at <strong>Rs.1500</strong></p>
+              <p class="price">Starting at <strong>Rs.15000</strong></p>
               <p>Full bridal makeup, hair styling & pre-wedding packages.</p>
             </div>
           </div>
