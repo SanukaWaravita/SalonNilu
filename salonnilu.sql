@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 12, 2025 at 02:36 PM
+-- Generation Time: Sep 13, 2025 at 02:04 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -17,8 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-CREATE DATABASE IF NOT EXISTS salonnilu;
-USE salonnilu;
+--
+-- Database: `salonnilu`
+--
 
 -- --------------------------------------------------------
 
@@ -39,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `booking` (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `service_id` (`service_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `booking`
@@ -66,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `message` text NOT NULL,
   `submitted_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -82,24 +83,24 @@ CREATE TABLE IF NOT EXISTS `services` (
   `price` decimal(10,2) DEFAULT '0.00',
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `services`
 --
 
 INSERT INTO `services` (`id`, `category`, `service_name`, `price`, `created_at`) VALUES
-(1, 'Men', 'Hair Care & Styling', 0.00, '2025-09-05 09:01:42'),
-(2, 'Men', 'Facial & Skin Treatments', 0.00, '2025-09-05 09:01:42'),
-(3, 'Men', 'Beard Grooming & Shaving', 0.00, '2025-09-05 09:01:42'),
-(4, 'Men', 'Hair Colouring & Highlights', 0.00, '2025-09-05 09:01:42'),
-(5, 'Women', 'Haircuts & Styling', 0.00, '2025-09-05 09:01:55'),
-(6, 'Women', 'Facials & Skincare', 0.00, '2025-09-05 09:01:55'),
-(7, 'Women', 'Manicure & Pedicure', 0.00, '2025-09-05 09:01:55'),
-(8, 'Women', 'Hair Colouring & Highlights', 0.00, '2025-09-05 09:01:55'),
-(9, 'Bridal', 'Bridal Hairstyling', 0.00, '2025-09-05 09:02:08'),
-(10, 'Bridal', 'Bridal Makeup', 0.00, '2025-09-05 09:02:08'),
-(11, 'Bridal', 'Couples Pre-Wedding Packages', 0.00, '2025-09-05 09:02:08'),
+(1, 'Men', 'Hair Care & Styling', 800.00, '2025-09-05 09:01:42'),
+(2, 'Men', 'Facial & Skin Treatments', 1500.00, '2025-09-05 09:01:42'),
+(3, 'Men', 'Beard Grooming & Shaving', 1000.00, '2025-09-05 09:01:42'),
+(4, 'Men', 'Hair Colouring & Highlights', 8000.00, '2025-09-05 09:01:42'),
+(5, 'Women', 'Haircuts & Styling', 1000.00, '2025-09-05 09:01:55'),
+(6, 'Women', 'Facials & Skincare', 1500.00, '2025-09-05 09:01:55'),
+(7, 'Women', 'Manicure & Pedicure', 2500.00, '2025-09-05 09:01:55'),
+(8, 'Women', 'Hair Colouring & Highlights', 10000.00, '2025-09-05 09:01:55'),
+(9, 'Bridal', 'Bridal Hairstyling', 6000.00, '2025-09-05 09:02:08'),
+(10, 'Bridal', 'Bridal Makeup', 8000.00, '2025-09-05 09:02:08'),
+(11, 'Bridal', 'Couples Pre-Wedding Packages', 12000.00, '2025-09-05 09:02:08'),
 (12, 'Bridal', 'Engagement & Reception Looks', 10000.00, '2025-09-05 09:02:08');
 
 -- --------------------------------------------------------
@@ -116,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role` enum('admin','staff','customer') DEFAULT 'customer',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
@@ -124,7 +125,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 (1, 'chamindu', 'chamindu828', 'admin'),
-(2, 'sanuka', 'sanuka123', 'admin');
+(2, 'sanuka', 'sanuka123', 'admin'),
+(3, 'amandi', 'amandi123', 'staff'),
+(4, 'isini', 'isini123', 'customer');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
