@@ -37,7 +37,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Hair Care & Styling</h5>
                             <p class="card-text">Experience the best in men's hair care and styling.</p>
-                            <a href="Mens Hair.html" class="btn btn-primary">See Details</a>
+                            <a href="servicesdetails.php#hair-care" class="btn btn-primary">See Details</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Facial & Skin Treatments</h5>
                             <p class="card-text">Revitalize your skin with our specialized facial treatments.</p>
-                            <a href="Mens Skin.html" class="btn btn-primary">See Details</a>
+                            <a href="servicesdetails.php#facial-treatments" class="btn btn-primary">See Details</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Beard Grooming & Shaving</h5>
                             <p class="card-text">Keep your beard looking sharp with our grooming services.</p>
-                            <a href="Mens Grooming.html" class="btn btn-primary">See Details</a>
+                            <a href="servicesdetails.php#beard-grooming" class="btn btn-primary">See Details</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Hair Colouring & Highlights</h5>
                             <p class="card-text">Transform your look with our expert hair colouring services.</p>
-                            <a href="Mens Hair Colouring.html" class="btn btn-primary">See Details</a>
+                            <a href="servicesdetails.php#hair-coloring" class="btn btn-primary">See Details</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Haircuts & Styling</h5>
                         <p class="card-text">Discover the latest trends in women's haircuts and styling.</p>
-                        <a href="Womens Haircut.html" class="btn btn-primary">See Details</a>
+                        <a href="servicesdetails.php#womens-haircuts" class="btn btn-primary">See Details</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Facials & Skincare</h5>
                         <p class="card-text">Indulge in our rejuvenating facials and skincare treatments.</p>
-                        <a href="Womens Skincare.html" class="btn btn-primary">See Details</a>  
+                        <a href="servicesdetails.php#womens-facials" class="btn btn-primary">See Details</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Manicure & Pedicure</h5>
                         <p class="card-text">Pamper yourself with our luxurious manicure and pedicure services.</p>
-                        <a href="Manicure & Pedicure.html" class="btn btn-primary">See Details</a>
+                        <a href="servicesdetails.php#manicure-pedicure" class="btn btn-primary">See Details</a>
                     </div>
                  </div>
              </div>
@@ -115,7 +115,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Hair Colouring & Highlights</h5>
                             <p class="card-text">Transform your look with our expert hair colouring services.</p>
-                            <a href="Womens Hair Colouring.html" class="btn btn-primary">See Details</a>
+                            <a href="servicesdetails.php#womens-coloring" class="btn btn-primary">See Details</a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Bridal Hair Styling</h5>
                             <p class="card-text">Experience the elegance of our bridal hair styling services.</p>
-                            <a href="Bridal Hairstyling.html" class="btn btn-primary">See Details</a>
+                            <a href="servicesdetails.php#bridal-hairstyling" class="btn btn-primary">See Details</a>
                         </div>
                      </div>
                     </div>
@@ -143,7 +143,7 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">Bridal Makeup</h5>
                                 <p class="card-text">Look your best on your special day with our bridal makeup services.</p>
-                                <a href="Bride Makeup.html" class="btn btn-primary">See Details</a>
+                                <a href="servicesdetails.php#bridal-makeup" class="btn btn-primary">See Details</a>
                             </div>
                         </div>
                     </div>
