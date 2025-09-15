@@ -1,14 +1,18 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FEEDBACKS</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/review.css">
-
+  <link rel="stylesheet" href="css/commoncomponents.css">
 </head>
 <body>
-  <div class="form-container">
+  <?php include 'navbar.php'; ?>
+  <div class="form-container" style="margin-top:80px;">
     <h1 align="center">GIVE US YOUR FEEDBACK</h1>
     <p>Please provide your feedback about our hair salon services. Your feedback is important to us!</p>
 
@@ -27,14 +31,12 @@
     <div style="margin-top:10px;">
       <div class="feedback-form">
           <h3 style="font-family: poppins;">RATE US:</h3>
-          <div class="nn">
-            <div class="stars">
-                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
-                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
-                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
-                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
-                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
-            </div>
+          <div class="stars" style="justify-content:center; margin-bottom:20px;">
+              <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
           </div>
           <div class="options">
               <label><input type="radio" name="cleanliness" value="Excellent"> Excellent</label>
@@ -49,5 +51,6 @@
       </div>
     </div>
   </div>
+  <?php include 'footer.php'; ?>
 </body>
 </html>

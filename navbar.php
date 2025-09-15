@@ -63,7 +63,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?php if($currentPage == 'reviews.php') echo 'active'; ?>" href="reviews.php">Reviews</a>
+          <a class="nav-link <?php if($currentPage == 'review.php') echo 'active'; ?>" href="review.php">Reviews</a>
         </li>
 
         <li class="nav-item">
