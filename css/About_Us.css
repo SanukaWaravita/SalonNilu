@@ -1,50 +1,269 @@
-.display-3{
-    text-align: center;
-}
-.containermy-5{
-    background: linear-gradient(to bottom, rgb(199, 64, 253), rgb(162, 32, 206), rgb(162, 23, 217) );
-    color:#fff;
-    padding: 20px;
-    border-bottom: 2px solid gold;
-    object-fit: cover;
-    margin-top: 80px;
-    
-}
-#about_img{
+.about-hero {
+    height: 22vh;
+    background: linear-gradient(rgba(74, 35, 90, 0.7), rgba(74, 35, 90, 0.7)), url('../images/about_us/aboutus-bg.jpg') center/cover no-repeat;
+    color: rgb(255, 255, 255);
     display: flex;
-    
     justify-content: center;
-    gap: 15px;
-    margin: 30px;
-    
-    
-
-
-
-}
-
-h1{
+    align-items: center;
     text-align: center;
+    border-bottom: 2px solid gold;
+    margin-top: 80px;
 }
-p{
-    text-align: center;
+
+.about-hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
-.funfact{
+
+.about-hero p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 10px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.about-content {
+    background: linear-gradient(to bottom, rgb(115, 87, 126), rgb(73, 44, 83), rgb(43, 8, 57));
     color: #fff;
-    display: contents;
-}
-ul{
-    font-size: larger;
-}
-p{
-    font-size: larger;
+    padding: 60px 0;
+    border-bottom: 2px solid gold;
 }
 
+.about-section {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    margin-bottom: 30px;
+}
 
+.about-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgb(255, 215, 0);
+}
 
+.section-title {
+    color: rgb(255, 215, 0);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
 
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: rgb(255, 215, 0);
+}
 
+.about-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
 
+.feature-list li {
+    padding: 12px 0 12px 40px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
 
+.feature-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    color: rgb(255, 215, 0);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
 
+.fun-facts {
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(73, 44, 83), rgb(115, 87, 126));
+    color: white;
+    padding: 60px 0;
+    border-bottom: 2px solid gold;
+}
+
+.fun-facts h2 {
+    color: rgb(255, 215, 0);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.fact-item {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(142, 69, 134, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+}
+
+.fact-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: rgb(255, 215, 0);
+    display: block;
+    line-height: 1.2;
+}
+
+.fact-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-section {
+    background: linear-gradient(to bottom, rgb(115, 87, 126), rgb(73, 44, 83), rgb(43, 8, 57));
+    padding: 60px 0;
+    border-bottom: 2px solid gold;
+}
+
+.gallery-section h2 {
+    color: rgb(255, 215, 0);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    border: 2px solid rgb(255, 215, 0);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.cta-section {
+    background: linear-gradient(to bottom, rgb(43, 8, 57), rgb(73, 44, 83), rgb(115, 87, 126));
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+.cta-section h2 {
+    color: rgb(255, 215, 0);
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.cta-section .btn-primary {
+    font-size: 1.3rem;
+    padding: 12px 35px;
+    border-radius: 30px;
+    background-color: rgb(255, 215, 0);
+    color: rgb(74, 35, 90);
+    border: none;
+    font-weight: 700;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.cta-section .btn-primary:hover {
+    background-color: rgb(230, 194, 0);
+    color: white;
+    transform: scale(1.15);
+}
+
+.cta-section .btn-outline-primary {
+    font-size: 1.3rem;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: rgb(255, 215, 0);
+    border-color: rgb(255, 215, 0);
+    background: transparent;
+    font-weight: 700;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-outline-primary:hover {
+    background-color: rgb(255, 215, 0);
+    color: rgb(74, 35, 90);
+    transform: scale(1.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 50vh;
+        padding: 40px 0;
+        margin-top: 70px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .fact-number {
+        font-size: 2.2rem;
+    }
+    
+    .cta-section .btn-primary,
+    .cta-section .btn-outline-primary {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
