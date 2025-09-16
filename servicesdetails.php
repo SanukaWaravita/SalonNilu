@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/commoncomponents.css" />
     <link rel="stylesheet" href="css/servicedetails.css">
@@ -79,12 +80,12 @@
                         <li>Scalp massage with treatment</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $35</div>
+                        <div class="price-tag">From Rs.800.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/ServicePage/Mens Hair.jpg" class="card-img-top" alt="HairCare & Styling">
+                    <img src="images/ServicePage/Mens Hair.jpg" class="card-img-top service-img" alt="HairCare & Styling">
                 </div>
             </div>
         </section>
@@ -103,12 +104,12 @@
                         <li>Anti-aging treatments</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $60</div>
+                        <div class="price-tag">From Rs.1500.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
-                     <img src="images/ServicePage/Mens Skin.jpg" class="card-img-top" alt="Facial Treatments">>
+                     <img src="images/ServicePage/Mens Skin.jpg" class="card-img-top service-img" alt="Facial Treatments">
                 </div>
             </div>
         </section>
@@ -127,12 +128,12 @@
                         <li>Beard styling products</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $25</div>
+                        <div class="price-tag">From Rs.1000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
- <img src="images/ServicePage/Mens Grooming.jpg" class="card-img-top" alt=" Beard Grooming & Shaving">
+                    <img src="images/ServicePage/Mens Grooming.jpg" class="card-img-top service-img" alt="Beard Grooming & Shaving">
                 </div>
             </div>
         </section>
@@ -151,12 +152,12 @@
                         <li>Personalized color consultation</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $45</div>
+                        <div class="price-tag">From Rs.8000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
-                    <img src="images/ServicePage/Mens Hair Colouring.jpg" class="card-img-top" alt="Hair Colouring & Highlights">
+                    <img src="images/ServicePage/Mens Hair Colouring.jpg" class="card-img-top service-img" alt="Hair Colouring & Highlights">
                 </div>
             </div>
         </section>
@@ -178,12 +179,12 @@
                         <li>Special occasion styling</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $45</div>
+                        <div class="price-tag">From Rs.1000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/ServicePage/Womens Haircut.jpg" class="card-img-top" alt="Haircuts & Styling">
+                    <img src="images/ServicePage/Womens Haircut.jpg" class="card-img-top service-img" alt="Haircuts & Styling">
                 </div>
             </div>
         </section>
@@ -202,12 +203,12 @@
                         <li>Skin analysis and consultation</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $65</div>
+                        <div class="price-tag">From Rs.1500.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
-                     <img src="images/ServicePage/Womens Skincare.jpg" class="card-img-top" alt="Facials & Skincare">
+                     <img src="images/ServicePage/Womens Skincare.jpg" class="card-img-top service-img" alt="Facials & Skincare">
                 </div>
             </div>
         </section>
@@ -226,12 +227,12 @@
                         <li>Long-lasting gel options</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $40</div>
+                        <div class="price-tag">From Rs.2500.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                   <img src="images/ServicePage/Manicure & Pedicure.jpg" class="card-img-top" alt="Manicure & Pedicure">
+                   <img src="images/ServicePage/Manicure & Pedicure.jpg" class="card-img-top service-img" alt="Manicure & Pedicure">
                 </div>
             </div>
         </section>
@@ -250,12 +251,12 @@
                         <li>Premium conditioning treatment</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $75</div>
+                        <div class="price-tag">From Rs.10000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
-                    <img src="images/ServicePage/Womens Hair Colouring.jpg" class="card-img-top" alt="Hair Colouring & Highlights">
+                    <img src="images/ServicePage/Womens Hair Colouring.jpg" class="card-img-top service-img" alt="Hair Colouring & Highlights">
                 </div>
             </div>
         </section>
@@ -277,12 +278,12 @@
                         <li>Emergency touch-up kit</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $150</div>
+                        <div class="price-tag">From Rs.6000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/ServicePage/Bridal Hairstyling.jpg" class="card-img-top" alt="Bridal Hair Styling">
+                    <img src="images/ServicePage/Bridal Hairstyling.jpg" class="card-img-top service-img" alt="Bridal Hair Styling">
                 </div>
             </div>
         </section>
@@ -301,12 +302,12 @@
                         <li>Touch-up services available</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $120</div>
+                        <div class="price-tag">From Rs.8000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
-                   <img src="images/ServicePage/Bride Makeup.jpg" class="card-img-top" alt="Bridal Makeup">
+                   <img src="images/ServicePage/Bride Makeup.jpg" class="card-img-top service-img" alt="Bridal Makeup">
                 </div>
             </div>
         </section>
@@ -325,12 +326,12 @@
                         <li>Relaxation and pampering</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $250</div>
+                        <div class="price-tag">From Rs.20000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                     <img src="images/ServicePage/Couples Prewedding Packages.jpg" class="card-img-top" alt="Couples Prewedding Packages">
+                     <img src="images/ServicePage/Couples Prewedding Packages.jpg" class="card-img-top service-img" alt="Couples Prewedding Packages">
                 </div>
             </div>
         </section>
@@ -349,12 +350,12 @@
                         <li>Group packages for wedding party</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="price-tag">From $180</div>
+                        <div class="price-tag">From Rs.15000.00</div>
                         <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
-                     <img src="images/ServicePage/Engagement & Reception looks.jpg" class="card-img-top" alt="Engagement & Reception Looks">
+                     <img src="images/ServicePage/Engagement & Reception looks.jpg" class="card-img-top service-img" alt="Engagement & Reception Looks">
                 </div>
             </div>
         </section>

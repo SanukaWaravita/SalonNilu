@@ -1,4 +1,35 @@
-/* Fix for body font visibility */
+
+.service-section {
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(80, 40, 120, 0.10);
+  border: none;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-section:hover {
+  box-shadow: 0 8px 32px rgba(80, 40, 120, 0.18);
+  transform: translateY(-6px) scale(1.02);
+  z-index: 2;
+}
+
+.service-section .card, .service-section .card-img-top, .service-section .service-img {
+  border-radius: 18px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-section .card {
+  box-shadow: 0 2px 12px rgba(80, 40, 120, 0.10);
+  border: none;
+  overflow: hidden;
+}
+
+.service-section .card:hover {
+  box-shadow: 0 8px 32px rgba(80, 40, 120, 0.18);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+
     body {
       font-family: 'Roboto', sans-serif;
       color: #333333;
@@ -7,7 +38,7 @@
       scroll-behavior: smooth;
     }
     
-    /* Ensure all text elements are visible */
+   
     h1, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;
       color: #010101;
@@ -23,13 +54,13 @@
       font-size: 1.05rem;
     }
     
-    /* Improve navbar styling */
+    
     .navbar-brand {
       font-family: 'Playfair Display', serif;
       font-weight: 600;
     }
     
-    /* Service section improvements */
+    
     .service-section {
       padding: 3rem 1rem;
       margin-bottom: 2rem;
@@ -44,10 +75,20 @@
       background-color: rgb(254, 253, 255);
     }
     
+
+    
     .service-img {
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
       margin-bottom: 1.5rem;
+      max-width: 100%;
+      width: 350px;
+      max-height: 400px;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .price-badge {
@@ -55,7 +96,7 @@
       padding: 0.5rem 1.5rem;
     }
     
-    /* Back to top button */
+    
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -64,7 +105,7 @@
       z-index: 1000;
     }
     
-    /* Make sure links are visible */
+    
     a {
       color: #6f42c1;
       text-decoration: none;
