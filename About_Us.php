@@ -28,8 +28,8 @@
           <div class="about-section">
             <h2 class="section-title center-title">Welcome to Salon Nilu</h2>
             <p class="about-text">
-              Welcome to Nilu Salon, your trusted unisex salon where beauty meets style and confidence. 
-              At Nilu, we believe that self-care is for everyone, which is why we offer a wide range of 
+              Welcome to SalonNilu, your trusted unisex salon where beauty meets style and confidence. 
+              At SalonNilu, we believe that self-care is for everyone, which is why we offer a wide range of 
               professional services for both men and women.
             </p>
             <p class="about-text">
