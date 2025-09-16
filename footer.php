@@ -11,7 +11,7 @@
         <div class="footer-card">
           <h5>Contact</h5>
           <p>📍 No. 123, Homagama, Colombo, Sri Lanka</p>
-          <p>📞 +94 111 1111</p>
+          <p>📞 +94 785133852</p>
           <p>✉️ info@salonnilu.com</p>
         </div>
 
@@ -19,22 +19,22 @@
           <h5>Follow Us</h5>
           <div class="social-icons">
             <div class="icon-wrapper">
-              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.facebook.com/share/18oJfvF1J2/"><i class="bi bi-facebook"></i></a>
               <span class="tooltip">Facebook</span>
             </div>
 
             <div class="icon-wrapper">
-              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.instagram.com/salon__nilu?igsh=MXB2anpubGxhMnY1bA=="><i class="bi bi-instagram"></i></a>
               <span class="tooltip">Instagram</span>
             </div>
 
             <div class="icon-wrapper">
-              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="https://twitter.com/SalonNilu"><i class="bi bi-twitter"></i></a>
               <span class="tooltip">Twitter</span>
             </div>
 
             <div class="icon-wrapper">
-              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://wa.me/94785133852"><i class="bi bi-whatsapp"></i></a>
               <span class="tooltip">WhatsApp</span>
             </div>
           </div>
