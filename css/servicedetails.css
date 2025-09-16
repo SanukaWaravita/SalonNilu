@@ -1,3 +1,14 @@
+/* Hover effect for service menu links in sidebar */
+.service-nav .nav-link {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+}
+.service-nav .nav-link:hover, .service-nav .nav-link.active {
+  background: #6f42c1;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(111,66,193,0.10);
+  text-decoration: none !important;
+}
 
 .service-section {
   border-radius: 18px;
@@ -108,12 +119,12 @@
     
     a {
       color: #6f42c1;
-      text-decoration: none;
+      text-decoration: none !important;
     }
     
     a:hover {
       color: #380b7a;
-      text-decoration: underline;
+      text-decoration: none !important;
     }
     
     /* Service navigation sidebar */

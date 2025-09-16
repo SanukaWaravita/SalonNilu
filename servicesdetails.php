@@ -81,7 +81,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.800.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -105,7 +105,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.1500.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
@@ -129,7 +129,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.1000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -153,7 +153,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.8000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
@@ -180,7 +180,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.1000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -204,7 +204,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.1500.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
@@ -228,7 +228,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.2500.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -252,7 +252,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.10000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
@@ -279,7 +279,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.6000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -303,7 +303,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.8000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
@@ -327,7 +327,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.20000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -351,7 +351,7 @@
                     </ul>
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <div class="price-tag">From Rs.15000.00</div>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
+                        <a href="booking.php" class="btn btn-primary"><i class="fas fa-calendar-check me-2"></i>Book Now</a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-1">
